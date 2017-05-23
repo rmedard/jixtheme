@@ -1,0 +1,53 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+bootstrap-scripts:
+  js:
+    bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
+    bootstrap/js/button.js: {}
+    bootstrap/js/carousel.js: {}
+    bootstrap/js/collapse.js: {}
+    bootstrap/js/dropdown.js: {}
+    bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
+    bootstrap/js/tab.js: {}
+    bootstrap/js/transition.js: {}
+
+selectboxit:
+  css:
+    theme:
+      lib/selectboxit/css/jquery.selectBoxIt.css: {}
+  js:
+    lib/selectboxit/js/jquery.selectBoxIt.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.ui
+    - core/jquery.once
+
+fuelux:
+  css:
+    theme:
+      lib/fuelux/css/fuelux.min.css: {}
+  js:
+    lib/fuelux/js/fuelux.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.ui
+    - core/jquery.once
+
+bootstrap-social:
+  css:
+    theme:
+      lib/font-awesome/css/font-awesome.min.css: {}
+      lib/bootstrap-social/bootstrap-social.css: {}
+
+custom-scripts:
+  js:
+    js/custom.js: {}

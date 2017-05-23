@@ -1,0 +1,93 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function jir_preprocess_menu(&$variables) {
+  if ($variables['menu_name'] === 'jobs-tabs-menu') {
+    $featured = Drupal::entityQuery('node')
+      ->condition('type', 'job')
+      ->condition('status', 1)
+      ->condition('field_job_posting_plan', ['featured', 'featured_custom', 'featured_shortlist'], 'IN')
+      ->count();
+    $featured_count = $featured->execute();
+
+    $jobs = Drupal::entityQuery('node')
+      ->condition('type', 'job')
+      ->condition('status', 1)
+      ->condition('field_job_advert_type', 'job')
+      ->count();
+    $jobs_count = $jobs->execute();
+
+    $tenders = Drupal::entityQuery('node')
+      ->condition('type', 'job')
+      ->condition('status', 1)
+      ->condition('field_job_advert_type', 'tender')
+      ->count();
+    $tenders_count = $tenders->execute();
+
+    $internship = Drupal::entityQuery('node')
+      ->condition('type', 'job')
+      ->condition('status', 1)
+      ->condition('field_job_advert_type', 'internship')
+      ->count();
+    $internship_count = $internship->execute();
+
+    $others = Drupal::entityQuery('node')
+      ->condition('type', 'job')
+      ->condition('status', 1)
+      ->condition('field_job_advert_type', 'other')
+      ->count();
+    $others_count = $others->execute();
+
+    $menu_values = [1 => $featured_count, 2 => $jobs_count, 3 => $tenders_count, 4 => $internship_count, 5 => $others_count];
+
+    $variables['menu_values'] = $menu_values;
+  }
+}
+
+function jir_preprocess_page(&$variables){
+    $page_path = Drupal::request()->getPathInfo();
+    $variables['show_jir_search'] = false;
+    $variables['show_sidebars'] = true;
+
+    /*
+     * This regex accepts paths like "/" only, or "/ads/*" where *
+     * is a word from a-z, no special character.
+     */
+    if (isMobile()){
+        $variables['show_jir_search'] = false;
+        $variables['show_sidebars'] = false;
+    }else{
+        if (preg_match('((\/)(ads\/(([a-z])\w+))?$)', $page_path)){
+            $variables['show_jir_search'] = true;
+        }
+
+        if (preg_match('(/pricing-plans-view)', $page_path)){
+            $variables['show_sidebars'] = false;
+        }
+
+        if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path)){
+            $variables['show_sidebars'] = false;
+        }
+    }
+}
+
+function jir_preprocess_block(&$variables){
+    $variables['is_mobile'] = isMobile();
+}
+
+function isMobile(){
+    $detail = Drupal::service('browscap')->getBrowser();
+    $browser_data = implode(',', $detail);
+    $mobile = preg_match('(Mobile)', $browser_data);
+    $android = preg_match('(Android)', $browser_data);
+    $iphone = preg_match('(IOS)', $browser_data);
+    if($mobile or $android or $iphone){
+        return true;
+    }else{
+        return false;
+    }
+}
