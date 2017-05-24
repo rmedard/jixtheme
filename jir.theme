@@ -7,7 +7,7 @@
  */
 function jir_preprocess_menu(&$variables) {
 
-   dump(views_get_view_result('jobs', 'page_1'));
+   dpm(views_get_view_result('jobs', 'page_1'));
 
   if ($variables['menu_name'] === 'jobs-tabs-menu') {
     $featured = Drupal::entityQuery('node')
