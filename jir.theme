@@ -40,6 +40,13 @@ function jir_preprocess_menu(&$variables) {
       ->count();
     $internship_count = $internship->execute();
 
+    $publics = Drupal::entityQuery('node')
+        ->condition('type', 'job')
+        ->condition('status', 1)
+        ->condition('field_job_company_name.field_employer_service_publique', 1)
+        ->count();
+    $publics_count = $publics->execute();
+
     $others = Drupal::entityQuery('node')
       ->condition('type', 'job')
       ->condition('status', 1)
@@ -47,7 +54,9 @@ function jir_preprocess_menu(&$variables) {
       ->count();
     $others_count = $others->execute();
 
-    $menu_values = [1 => $featured_count, 2 => $jobs_count, 3 => $tenders_count, 4 => $internship_count, 5 => $others_count];
+    $menu_values = [1 => $featured_count, 2 => $jobs_count,
+        3 => $tenders_count, 4 => $internship_count,
+        5=>$publics_count, 6 => $others_count];
 
     $variables['menu_values'] = $menu_values;
   }
