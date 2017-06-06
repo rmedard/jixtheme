@@ -43,7 +43,7 @@ function jir_preprocess_menu(&$variables) {
     $publics = Drupal::entityQuery('node')
         ->condition('type', 'job')
         ->condition('status', 1)
-        ->condition('field_job_company_name.field_employer_service_publique', 1)
+        ->condition('field_job_company_name.entity.field_employer_service_publique', 1)
         ->count();
     $publics_count = $publics->execute();
 
