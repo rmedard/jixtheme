@@ -183,6 +183,14 @@
         {% endblock %}
       </section>
 
+          {% if page.sidebar_horizontal and show_sidebars %}
+            {% block sidebar_horizontal %}
+                <aside class="col-sm-4" role="complementary">
+                    {{ page.sidebar_horizontal }}
+                </aside>
+            {% endblock %}
+          {% endif %}
+
         {# Sidebar First #}
         {% if page.sidebar_first and show_sidebars %}
             {% block sidebar_first %}

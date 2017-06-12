@@ -16,6 +16,7 @@ regions:
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
+  sidebar_horizontal: 'Sidebar Horizontal'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   jir_footer_1: 'JIR Footer 1'
