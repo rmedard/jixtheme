@@ -68,14 +68,14 @@ function jir_preprocess_page(&$variables){
     $variables['show_sidebars'] = true;
 
     /*
-     * This regex accepts paths like "/" only, or "/ads/*" where *
+     * This regex accepts paths like "/" only, or "/adverts/*" where *
      * is a word from a-z, no special character.
      */
     if (isMobile()){
         $variables['show_jir_search'] = false;
         $variables['show_sidebars'] = false;
     }else{
-        if (preg_match('((\/)(ads\/(([a-z])\w+))?$)', $page_path)){
+        if (preg_match('((\/)(adverts\/(([a-z])\w+))?$)', $page_path)){
             $variables['show_jir_search'] = true;
         }
 
@@ -83,7 +83,7 @@ function jir_preprocess_page(&$variables){
             $variables['show_sidebars'] = false;
         }
 
-        if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path)){
+        if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)){
             $variables['show_sidebars'] = false;
         }
     }
