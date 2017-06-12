@@ -7770,11 +7770,6 @@ div.form-item-field-employer-sector-value > div.select-wrapper {
 div.form-item-field-employer-sector-value > div.select-wrapper select {
   width: inherit;
 }
-form#views-exposed-form-adverts-page-search-ads > div > div.form-item > div.input-group > span.input-group-addon {
-  padding: 6px 9px;
-  font-size: 13px;
-  border-radius: 3px;
-}
 .jir-main-footer {
   background-color: #2C3E50;
   padding-top: 15px;
