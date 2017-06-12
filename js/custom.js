@@ -10,7 +10,7 @@
     $('form#views-exposed-form-jobs-page-jobs-search > div > div.form-item-field-employer-sector-value').addClass('col-lg-4 col-md-4');
     $('form#views-exposed-form-jobs-page-jobs-search > div > div.form-actions').addClass('col-lg-2 col-md-2');
 
-    $('#edit-submit-jobs').removeClass('btn-xs');
+    $('#edit-submit-adverts').removeClass('btn-xs');
 
     $('div.field--name-field-application-form > a').addClass('btn btn-success btn-xs btn-block');
 
