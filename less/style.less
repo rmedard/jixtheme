@@ -42,11 +42,15 @@ div.jir-search-textfield > div.input-group, img.jix-banner-image{
 }
 
 @media (max-width: @screen-md-min){
-  .main-container{
-    padding-top: 0px;
-  }
-  .super-main{
+  div.super-main{
     margin-top: 45px;
+
+    div.main-container{
+      padding-top: 0px;
+      div.row > section{
+        min-height: 300px;
+      }
+    }
     .jir-search-bar{
       padding: 20px;
       background: @gray-lighter;

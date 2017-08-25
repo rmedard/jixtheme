@@ -7657,13 +7657,16 @@ img.jix-banner-image {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .main-container {
-    padding-top: 0px;
-  }
-  .super-main {
+  div.super-main {
     margin-top: 45px;
   }
-  .super-main .jir-search-bar {
+  div.super-main div.main-container {
+    padding-top: 0px;
+  }
+  div.super-main div.main-container div.row > section {
+    min-height: 300px;
+  }
+  div.super-main .jir-search-bar {
     padding: 20px;
     background: #ecf0f1;
   }
