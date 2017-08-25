@@ -7682,7 +7682,7 @@ aside {
 }
 @media (min-width: 992px) {
   ul.nav-pills > li > a {
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0 0;
   }
   .super-main {
     margin-top: 165px;
