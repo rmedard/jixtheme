@@ -7663,9 +7663,6 @@ img.jix-banner-image {
   div.super-main div.main-container {
     padding-top: 0px;
   }
-  div.super-main div.main-container div.row > section {
-    min-height: 300px;
-  }
   div.super-main .jir-search-bar {
     padding: 20px;
     background: #ecf0f1;
@@ -7689,6 +7686,9 @@ aside {
   }
   .super-main {
     margin-top: 165px;
+  }
+  .super-main div.main-container div.row > section {
+    min-height: 300px;
   }
   .super-main .jir-search-bar {
     padding: 20px;
