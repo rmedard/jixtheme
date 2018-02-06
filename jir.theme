@@ -5,103 +5,111 @@
  *
  * Place your custom PHP code in this file.
  */
-use Drupal\views\Views;
 
 function jir_preprocess_menu(&$variables) {
 
-//   kint(count(Views::getView('jobs')->executeDisplay('page_1')));
+    if ($variables['menu_name'] === 'jobs-tabs-menu') {
+        $featured = Drupal::entityQuery('node')
+            ->condition('type', 'job')
+            ->condition('status', 1)
+            ->condition('field_job_posting_plan', [
+                'featured',
+                'featured_custom',
+                'featured_shortlist',
+            ], 'IN')
+            ->count();
+        $featured_count = $featured->execute();
 
-  if ($variables['menu_name'] === 'jobs-tabs-menu') {
-    $featured = Drupal::entityQuery('node')
-      ->condition('type', 'job')
-      ->condition('status', 1)
-      ->condition('field_job_posting_plan', ['featured', 'featured_custom', 'featured_shortlist'], 'IN')
-      ->count();
-    $featured_count = $featured->execute();
+        $jobs = Drupal::entityQuery('node')
+            ->condition('type', 'job')
+            ->condition('status', 1)
+            ->condition('field_job_advert_type', 'job')
+            ->count();
+        $jobs_count = $jobs->execute();
 
-    $jobs = Drupal::entityQuery('node')
-      ->condition('type', 'job')
-      ->condition('status', 1)
-      ->condition('field_job_advert_type', 'job')
-      ->count();
-    $jobs_count = $jobs->execute();
+        $tenders = Drupal::entityQuery('node')
+            ->condition('type', 'job')
+            ->condition('status', 1)
+            ->condition('field_job_advert_type', 'tender')
+            ->count();
+        $tenders_count = $tenders->execute();
 
-    $tenders = Drupal::entityQuery('node')
-      ->condition('type', 'job')
-      ->condition('status', 1)
-      ->condition('field_job_advert_type', 'tender')
-      ->count();
-    $tenders_count = $tenders->execute();
+        $internship = Drupal::entityQuery('node')
+            ->condition('type', 'job')
+            ->condition('status', 1)
+            ->condition('field_job_advert_type', 'internship')
+            ->count();
+        $internship_count = $internship->execute();
 
-    $internship = Drupal::entityQuery('node')
-      ->condition('type', 'job')
-      ->condition('status', 1)
-      ->condition('field_job_advert_type', 'internship')
-      ->count();
-    $internship_count = $internship->execute();
+        $publics = Drupal::entityQuery('node')
+            ->condition('type', 'job')
+            ->condition('status', 1)
+            ->condition('field_job_company_name.entity.field_employer_service_publique', 1)
+            ->count();
+        $publics_count = $publics->execute();
 
-    $publics = Drupal::entityQuery('node')
-        ->condition('type', 'job')
-        ->condition('status', 1)
-        ->condition('field_job_company_name.entity.field_employer_service_publique', 1)
-        ->count();
-    $publics_count = $publics->execute();
+        $others = Drupal::entityQuery('node')
+            ->condition('type', 'job')
+            ->condition('status', 1)
+            ->condition('field_job_advert_type', 'other')
+            ->count();
+        $others_count = $others->execute();
 
-    $others = Drupal::entityQuery('node')
-      ->condition('type', 'job')
-      ->condition('status', 1)
-      ->condition('field_job_advert_type', 'other')
-      ->count();
-    $others_count = $others->execute();
+        $menu_values = [
+            1 => $featured_count,
+            2 => $jobs_count,
+            3 => $tenders_count,
+            4 => $internship_count,
+            5 => $publics_count,
+            6 => $others_count,
+        ];
 
-    $menu_values = [1 => $featured_count, 2 => $jobs_count,
-        3 => $tenders_count, 4 => $internship_count,
-        5=>$publics_count, 6 => $others_count];
-
-    $variables['menu_values'] = $menu_values;
-  }
+        $variables['menu_values'] = $menu_values;
+    }
 }
 
-function jir_preprocess_page(&$variables){
+function jir_preprocess_page(&$variables) {
     $page_path = Drupal::request()->getPathInfo();
-    $variables['show_jir_search'] = false;
-    $variables['show_sidebars'] = true;
+    $variables['show_jir_search'] = FALSE;
+    $variables['show_sidebars'] = TRUE;
 
     /*
      * This regex accepts paths like "/" only, or "/adverts/*" where *
      * is a word from a-z, no special character.
      */
-    if (isMobile()){
-        $variables['show_jir_search'] = false;
-        $variables['show_sidebars'] = false;
-    }else{
-        if (preg_match('((\/)(adverts\/(([a-z])\w+))?$)', $page_path)){
-            $variables['show_jir_search'] = true;
+    if (isMobile()) {
+        $variables['show_jir_search'] = FALSE;
+        $variables['show_sidebars'] = FALSE;
+    }
+    else {
+        if (preg_match('((\/)(adverts\/(([a-z])\w+))?$)', $page_path)) {
+            $variables['show_jir_search'] = TRUE;
         }
 
-        if (preg_match('(/pricing-plans-view)', $page_path)){
-            $variables['show_sidebars'] = false;
+        if (preg_match('(/pricing-plans-view)', $page_path)) {
+            $variables['show_sidebars'] = FALSE;
         }
 
-        if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)){
-            $variables['show_sidebars'] = false;
+        if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
+            $variables['show_sidebars'] = FALSE;
         }
     }
 }
 
-function jir_preprocess_block(&$variables){
+function jir_preprocess_block(&$variables) {
     $variables['is_mobile'] = isMobile();
 }
 
-function isMobile(){
+function isMobile() {
     $detail = Drupal::service('browscap')->getBrowser();
     $browser_data = implode(',', $detail);
     $mobile = preg_match('(Mobile)', $browser_data);
     $android = preg_match('(Android)', $browser_data);
     $iphone = preg_match('(IOS)', $browser_data);
-    if($mobile or $android or $iphone){
-        return true;
-    }else{
-        return false;
+    if ($mobile or $android or $iphone) {
+        return TRUE;
+    }
+    else {
+        return FALSE;
     }
 }
