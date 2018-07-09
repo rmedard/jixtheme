@@ -1371,11 +1371,11 @@ a.bg-success:focus {
   background-color: #18892d;
 }
 .bg-info {
-  background-color: #3498DB;
+  background-color: #2C3E50;
 }
 a.bg-info:hover,
 a.bg-info:focus {
-  background-color: #217dbb;
+  background-color: #1a242f;
 }
 .bg-warning {
   background-color: #F39C12;
@@ -2370,14 +2370,14 @@ table th[class*="col-"] {
 .table > thead > tr.info > th,
 .table > tbody > tr.info > th,
 .table > tfoot > tr.info > th {
-  background-color: #3498DB;
+  background-color: #2C3E50;
 }
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: #258cd1;
+  background-color: #233140;
 }
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
@@ -3210,26 +3210,26 @@ fieldset[disabled] .btn-success.focus {
 }
 .btn-info {
   color: #fff;
-  background-color: #3498DB;
-  border-color: #3498DB;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
 }
 .btn-info:focus,
 .btn-info.focus {
   color: #fff;
-  background-color: #217dbb;
-  border-color: #16527a;
+  background-color: #1a242f;
+  border-color: #000000;
 }
 .btn-info:hover {
   color: #fff;
-  background-color: #217dbb;
-  border-color: #2077b2;
+  background-color: #1a242f;
+  border-color: #161f29;
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #fff;
-  background-color: #217dbb;
-  border-color: #2077b2;
+  background-color: #1a242f;
+  border-color: #161f29;
 }
 .btn-info:active:hover,
 .btn-info.active:hover,
@@ -3241,8 +3241,8 @@ fieldset[disabled] .btn-success.focus {
 .btn-info.active.focus,
 .open > .dropdown-toggle.btn-info.focus {
   color: #fff;
-  background-color: #1c699d;
-  border-color: #16527a;
+  background-color: #0d1318;
+  border-color: #000000;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3258,11 +3258,11 @@ fieldset[disabled] .btn-info:focus,
 .btn-info.disabled.focus,
 .btn-info[disabled].focus,
 fieldset[disabled] .btn-info.focus {
-  background-color: #3498DB;
-  border-color: #3498DB;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
 }
 .btn-info .badge {
-  color: #3498DB;
+  color: #2C3E50;
   background-color: #fff;
 }
 .btn-warning {
@@ -4863,11 +4863,11 @@ a.label:focus {
   background-color: #18892d;
 }
 .label-info {
-  background-color: #3498DB;
+  background-color: #2C3E50;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #217dbb;
+  background-color: #1a242f;
 }
 .label-warning {
   background-color: #F39C12;
@@ -5041,12 +5041,12 @@ a.thumbnail.active {
   color: #e6e6e6;
 }
 .alert-info {
-  background-color: #3498DB;
-  border-color: #3498DB;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
   color: #fff;
 }
 .alert-info hr {
-  border-top-color: #258cd1;
+  border-top-color: #233140;
 }
 .alert-info .alert-link {
   color: #e6e6e6;
@@ -5135,7 +5135,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #3498DB;
+  background-color: #2C3E50;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5319,7 +5319,7 @@ button.list-group-item-success.active:focus {
 }
 .list-group-item-info {
   color: #fff;
-  background-color: #3498DB;
+  background-color: #2C3E50;
 }
 a.list-group-item-info,
 button.list-group-item-info {
@@ -5334,7 +5334,7 @@ button.list-group-item-info:hover,
 a.list-group-item-info:focus,
 button.list-group-item-info:focus {
   color: #fff;
-  background-color: #258cd1;
+  background-color: #233140;
 }
 a.list-group-item-info.active,
 button.list-group-item-info.active,
@@ -5702,22 +5702,22 @@ button.list-group-item-danger.active:focus {
   border-bottom-color: #1fb53b;
 }
 .panel-info {
-  border-color: #3498DB;
+  border-color: #2C3E50;
 }
 .panel-info > .panel-heading {
   color: #fff;
-  background-color: #3498DB;
-  border-color: #3498DB;
+  background-color: #2C3E50;
+  border-color: #2C3E50;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #3498DB;
+  border-top-color: #2C3E50;
 }
 .panel-info > .panel-heading .badge {
-  color: #3498DB;
+  color: #2C3E50;
   background-color: #fff;
 }
 .panel-info > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #3498DB;
+  border-bottom-color: #2C3E50;
 }
 .panel-warning {
   border-color: #F39C12;
@@ -7420,7 +7420,7 @@ p:last-child,
 }
 .text-info,
 .text-info:hover {
-  color: #3498DB;
+  color: #2C3E50;
 }
 table a:not(.btn),
 .table a:not(.btn) {
@@ -7648,7 +7648,10 @@ a.list-group-item-danger.active:focus {
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
-body.toolbar-fixed > .super-main {
+body {
+  color: #2C3E50;
+}
+body .toolbar-fixed > .super-main {
   margin-top: 90px;
 }
 .jir-top-banner {
@@ -7728,7 +7731,7 @@ aside {
   background-color: #E74C3C;
 }
 .badge-info {
-  background-color: #3498DB;
+  background-color: #2C3E50;
 }
 #block-jobstabsmenu,
 .media-object > .media,
