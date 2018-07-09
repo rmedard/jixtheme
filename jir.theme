@@ -95,21 +95,3 @@ function jir_preprocess_page(&$variables) {
         }
     }
 }
-
-function jir_preprocess_block(&$variables) {
-    $variables['is_mobile'] = isMobile();
-}
-
-function isMobile() {
-    $detail = Drupal::service('browscap')->getBrowser();
-    $browser_data = implode(',', $detail);
-    $mobile = preg_match('(Mobile)', $browser_data);
-    $android = preg_match('(Android)', $browser_data);
-    $iphone = preg_match('(IOS)', $browser_data);
-    if ($mobile or $android or $iphone) {
-        return TRUE;
-    }
-    else {
-        return FALSE;
-    }
-}
