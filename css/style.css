@@ -7657,6 +7657,13 @@ body .toolbar-fixed > .super-main {
 .jir-top-banner {
   display: none;
 }
+nav#block-jir-main-menu ul.menu > li a:hover {
+  color: #2C3E50;
+}
+nav#block-jir-main-menu ul.menu > li a.is-active {
+  color: #2C3E50;
+  font-weight: bolder;
+}
 .media-heading {
   font-size: x-large;
 }
