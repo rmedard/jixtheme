@@ -7657,9 +7657,6 @@ body .toolbar-fixed > .super-main {
 .jir-top-banner {
   display: none;
 }
-nav#block-jir-main-menu ul.menu > li a:hover {
-  font-weight: bolder;
-}
 nav#block-jir-main-menu ul.menu > li a.is-active {
   font-weight: bolder;
 }
