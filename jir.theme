@@ -77,21 +77,16 @@ function jir_preprocess_page(&$variables) {
      * This regex accepts paths like "/" only, or "/adverts/*" where *
      * is a word from a-z, no special character.
      */
-    if (isMobile()) {
-        $variables['show_jir_search'] = FALSE;
+
+    if (preg_match('((\/)(adverts\/(([a-z])\w+))?$)', $page_path)) {
+        $variables['show_jir_search'] = TRUE;
+    }
+
+    if (preg_match('(/pricing-plans-view)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
     }
-    else {
-        if (preg_match('((\/)(adverts\/(([a-z])\w+))?$)', $page_path)) {
-            $variables['show_jir_search'] = TRUE;
-        }
 
-        if (preg_match('(/pricing-plans-view)', $page_path)) {
-            $variables['show_sidebars'] = FALSE;
-        }
-
-        if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
-            $variables['show_sidebars'] = FALSE;
-        }
+    if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
+        $variables['show_sidebars'] = FALSE;
     }
 }
