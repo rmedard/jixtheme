@@ -7,10 +7,11 @@
 @import 'variables.less';
 @import 'bootswatch.less';
 
+// Variable overrides
+@import "variable-overrides";
+
 @jir-top-height: 15px;
 @dark-green: #19826d;
-
-
 
 body.toolbar-fixed > .super-main{
   margin-top: 90px;
@@ -46,7 +47,7 @@ div.jir-search-textfield > div.input-group, img.jix-banner-image{
     margin-top: 45px;
 
     div.main-container{
-      padding-top: 0px;
+      padding-top: 0;
 
     }
     .jir-search-bar{
@@ -132,7 +133,7 @@ div.super-featured-jobs > div.view-content > div.media-object{
 
 .block-views-blockjobs-block-jobs-per-employer{
   h2{
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
   }
 }
@@ -291,7 +292,7 @@ section#jir-footer > .container > .row > .region{
 #views-bootstrap-jobs-block-single-job-employer, #views-bootstrap-employers-block-single-employer {
   .media{
     border: none;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
@@ -300,15 +301,15 @@ div.view-display-id-block_jobs_per_employer > div.view-content > div.views-row{
 }
 
 #jix_social_buttons_block, .field--name-field-application-form{
-  margin: 10px 0px;
+  margin: 10px 0;
   div{
-    padding: 0px 1px;
+    padding: 0 1px;
   }
   div:first-child{
-    padding-left: 0px;
+    padding-left: 0;
   }
   div:last-child{
-    padding-right: 0px;
+    padding-right: 0;
   }
 }
 
