@@ -1,9 +1,11 @@
 /**
  * Created by medard on 22/03/2017.
  */
-(function ($) {
+(function ($, Drupal) {
 
     //$('select').selectBoxIt();
+
+    console.log(Drupal.attributes.settings);
 
     if ( window.location.pathname === '/' ) {
         $('nav#block-jir-main-menu > ul.menu > li:first-child').addClass('active');
@@ -26,4 +28,4 @@
     $('div.view-jobs-view > div.view-content > div.media > div:last-child').addClass('job-teaser-right col-md-10 col-sm-10 col-xs-10');
 
     $('div#edit-field-job-company-name-wrapper').append("<div><a href='/node/add/employer'>Vous ne trouvez pas l'employeur? Cliquez ici.</a></div>");
-}(jQuery));
+}(jQuery, Drupal));
