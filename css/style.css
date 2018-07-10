@@ -7638,6 +7638,10 @@ body,
 div.super-main {
   margin-top: 94px;
 }
+div.super-main .jir-search-bar {
+  padding: 9px;
+  background: #ecf0f1;
+}
 .jir-top-banner {
   display: none;
 }
@@ -7667,10 +7671,6 @@ img.jix-banner-image {
   div.super-main div.main-container {
     padding-top: 0;
   }
-  div.super-main .jir-search-bar {
-    padding: 9px;
-    background: #ecf0f1;
-  }
 }
 header > .container > .navbar-header {
   padding-left: 15px;
@@ -7693,10 +7693,6 @@ aside {
   }
   .super-main div.main-container div.row > section {
     min-height: 300px;
-  }
-  .super-main .jir-search-bar {
-    padding: 20px;
-    background: #ecf0f1;
   }
   .jir-top-banner {
     display: block;
