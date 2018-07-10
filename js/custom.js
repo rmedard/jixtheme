@@ -28,7 +28,8 @@
             $('div.view-jobs-view > div.view-content > div.media > div:last-child').addClass('job-teaser-right col-md-10 col-sm-10 col-xs-10');
 
             if (settings.path.currentPath === 'node/add/job') {
-                $('div#edit-field-job-company-name-wrapper', context).once('testBehavior').append("<div><a href='/node/add/employer'>Vous ne trouvez pas l'employeur? Cliquez ici.</a></div>");
+                $(context).find('div#edit-field-job-company-name-wrapper').once('testBehavior').append("<div><a href='/node/add/employer'>Vous ne trouvez pas l'employeur? Cliquez ici.</a></div>");
+                // $('div#edit-field-job-company-name-wrapper', context).once('testBehavior').append("<div><a href='/node/add/employer'>Vous ne trouvez pas l'employeur? Cliquez ici.</a></div>");
             }
         }
     };
