@@ -7684,6 +7684,9 @@ img.jix-banner-image {
   nav#block-jir-main-menu ul.menu > li a {
     color: #222222;
   }
+  nav#block-jir-main-menu ul.menu > li a.is-active {
+    color: #ecf0f1;
+  }
   nav#block-jir-main-menu ul.menu > li:hover {
     background-color: #b4bcc2;
   }
