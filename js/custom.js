@@ -12,8 +12,6 @@
       }
     };
 
-    console.log(Drupal.attributes.settings);
-
     if ( window.location.pathname === '/' ) {
         $('nav#block-jir-main-menu > ul.menu > li:first-child').addClass('active');
     }
