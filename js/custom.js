@@ -1,3 +1,4 @@
+// noinspection JSAnnotator
 /**
  * Created by medard on 22/03/2017.
  */
@@ -7,9 +8,7 @@
     Drupal.behaviors.main = {
         attach: function (context, settings) {
 
-            $(context).find('body').once('main', function () {
-                console.log(settings);
-            });
+            printer(settings);
 
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once('main').addClass('active');
@@ -34,5 +33,9 @@
             }
         }
     };
+
+    function printer(value) {
+        console.log(value);
+    }
 
 }(jQuery, Drupal));
