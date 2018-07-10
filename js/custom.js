@@ -7,7 +7,7 @@
     Drupal.behaviors.main = {
         attach: function (context, settings) {
 
-            $(context).once('main', function () {
+            $(context).find('body').once('main', function () {
                 console.log(settings);
             });
 
