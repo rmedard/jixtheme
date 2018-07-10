@@ -2,14 +2,18 @@
 /**
  * Created by medard on 22/03/2017.
  */
+
 (function ($, Drupal) {
 
     'use strict';
     Drupal.behaviors.main = {
+
         attach: function (context, settings) {
 
+            const mainBehavior = 'main';
+
             if (settings.path.isFront) {
-                $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once('main').addClass('active');
+                $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(mainBehavior).addClass('active');
             }
 
             $(context).find('form#views-exposed-form-adverts-page-search-ads input').once('main').addClass('input-sm');
