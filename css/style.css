@@ -7635,8 +7635,8 @@ body,
 .form-control {
   color: #222222;
 }
-body .toolbar-fixed > .super-main {
-  margin-top: 90px;
+div.super-main {
+  margin-top: 94px;
 }
 .jir-top-banner {
   display: none;
@@ -7664,14 +7664,11 @@ img.jix-banner-image {
   width: 100%;
 }
 @media (max-width: 992px) {
-  div.super-main {
-    margin-top: 45px;
-  }
   div.super-main div.main-container {
     padding-top: 0;
   }
   div.super-main .jir-search-bar {
-    padding: 20px;
+    padding: 9px;
     background: #ecf0f1;
   }
 }
