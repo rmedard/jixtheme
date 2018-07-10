@@ -5,7 +5,7 @@
 
     'use strict';
     Drupal.behaviors.awesome = {
-        attach: function (context, settings) {
+        attach: function (document, settings) {
 
             console.log(settings);
 
