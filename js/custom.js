@@ -5,6 +5,13 @@
 
     //$('select').selectBoxIt();
 
+    'use strict';
+    Drupal.behaviors.awesome = {
+      attach: function (context, settings) {
+          console.log(settings);
+      }
+    };
+
     console.log(Drupal.attributes.settings);
 
     if ( window.location.pathname === '/' ) {

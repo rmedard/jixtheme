@@ -26,6 +26,7 @@ selectboxit:
     lib/selectboxit/js/jquery.selectBoxIt.min.js: {}
   dependencies:
     - core/drupal
+    - core/drupalSettings
     - core/jquery
     - core/jquery.ui
     - core/jquery.once
