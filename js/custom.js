@@ -17,7 +17,7 @@
             }
 
             $(context).find('form#views-exposed-form-adverts-page-search-ads input').once(main).addClass('input-sm');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads div.input-group > span').once('main').addClass('input-sm');
+            $(context).find('form#views-exposed-form-adverts-page-search-ads div.input-group > span').once(main).addClass('input-sm');
             $(context).find('form#views-exposed-form-adverts-page-search-ads select').once(main).addClass('input-sm');
 
             $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine').once(main).addClass('col-lg-6 col-md-6');
