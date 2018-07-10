@@ -5,6 +5,10 @@
 
     //$('select').selectBoxIt();
 
+    if ( window.location.pathname === '/' ) {
+        $('nav#block-jir-main-menu > ul.menu > li:first-child').addClass('active');
+    }
+
     $('form#views-exposed-form-adverts-page-search-ads input').addClass('input-sm');
     $('form#views-exposed-form-adverts-page-search-ads div.input-group > span').addClass('input-sm');
     $('form#views-exposed-form-adverts-page-search-ads select').addClass('input-sm');
