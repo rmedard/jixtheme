@@ -1,4 +1,5 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7359,24 +7360,6 @@ p:last-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
 }
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
-}
 .navbar {
   border-width: 0;
 }
@@ -7648,8 +7631,9 @@ a.list-group-item-danger.active:focus {
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
-body {
-  color: #2C3E50;
+body,
+.form-control {
+  color: #222222;
 }
 body .toolbar-fixed > .super-main {
   margin-top: 90px;
@@ -7698,10 +7682,10 @@ header > .container > .navbar-header .region-navigation > a.logo > img {
   height: 45px;
 }
 aside {
-  padding-top: 15px;
+  padding-top: 16px;
 }
 #block-jobstabsmenu {
-  margin-top: 15px;
+  margin-top: 16px;
 }
 @media (min-width: 992px) {
   ul.nav-pills > li > a {
