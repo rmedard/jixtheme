@@ -7681,10 +7681,10 @@ img.jix-banner-image {
   button[aria-expanded='true'] {
     background: #460a00;
   }
-  nav#block-rir-main-menu ul.menu > li a {
+  nav#block-jir-main-menu ul.menu > li a {
     color: #222222;
   }
-  nav#block-rir-main-menu ul.menu > li:hover {
+  nav#block-jir-main-menu ul.menu > li:hover {
     background-color: #b4bcc2;
   }
   a#post-advert-button {
