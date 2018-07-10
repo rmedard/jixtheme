@@ -8,8 +8,6 @@
     Drupal.behaviors.main = {
         attach: function (context, settings) {
 
-            printer(settings);
-
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once('main').addClass('active');
             }
@@ -34,8 +32,6 @@
         }
     };
 
-    function printer(value) {
-        console.log(value);
-    }
+    console.log(Drupal.settings);
 
 }(jQuery, Drupal));
