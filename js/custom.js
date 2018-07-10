@@ -7,14 +7,17 @@
 
     'use strict';
     Drupal.behaviors.awesome = {
-      attach: function (context, settings) {
-          console.log(settings);
-      }
+        attach: function (context, settings) {
+            console.log(settings);
+            if (settings.path.isFront) {
+                $('nav#block-jir-main-menu > ul.menu > li:first-child').addClass('active');
+            }
+        }
     };
 
-    if ( window.location.pathname === '/' ) {
-        $('nav#block-jir-main-menu > ul.menu > li:first-child').addClass('active');
-    }
+    // if ( window.location.pathname === '/' ) {
+    //     $('nav#block-jir-main-menu > ul.menu >
+    // li:first-child').addClass('active'); }
 
     $('form#views-exposed-form-adverts-page-search-ads input').addClass('input-sm');
     $('form#views-exposed-form-adverts-page-search-ads div.input-group > span').addClass('input-sm');
