@@ -7,7 +7,9 @@
     Drupal.behaviors.main = {
         attach: function (context, settings) {
 
-            console.log(settings);
+            $(context).once('main', function () {
+                console.log(settings);
+            });
 
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once('main').addClass('active');
