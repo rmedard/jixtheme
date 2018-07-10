@@ -7664,6 +7664,33 @@ div.jir-search-textfield > div.input-group,
 img.jix-banner-image {
   width: 100%;
 }
+@media (max-width: 768px) {
+  header#navbar {
+    background-color: #ecf0f1;
+    border-bottom: 1px #881300 solid;
+  }
+  header#navbar div.container > div.navbar-header {
+    border-bottom: 1px #881300 solid;
+  }
+  header#navbar div.container > div.navbar-header div.region-navigation > .navbar-text {
+    display: none;
+  }
+  button.navbar-toggle {
+    background-color: #881300;
+  }
+  button[aria-expanded='true'] {
+    background: #460a00;
+  }
+  nav#block-rir-main-menu ul.menu > li a {
+    color: #222222;
+  }
+  nav#block-rir-main-menu ul.menu > li:hover {
+    background-color: #b4bcc2;
+  }
+  a#post-advert-button {
+    width: 100%;
+  }
+}
 @media (max-width: 992px) {
   div.super-main div.main-container {
     padding-top: 0;
