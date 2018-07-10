@@ -1,7 +1,7 @@
 /**
  * Created by medard on 22/03/2017.
  */
-(function ($, Drupal) {
+(function ($) {
 
     'use strict';
     Drupal.behaviors.awesome = {
@@ -29,4 +29,4 @@
         }
     };
 
-}(jQuery, Drupal));
+}(jQuery));
