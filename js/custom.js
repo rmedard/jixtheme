@@ -5,6 +5,8 @@
 
     //$('select').selectBoxIt();
 
+    $('form#views-exposed-form-adverts-page-search-ads input').addClass('input-sm');
+
     $('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine').addClass('col-lg-6 col-md-6');
     $('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine > div.input-group').css('width', '100%');
     $('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-field-employer-sector-value').addClass('col-lg-4 col-md-4');
