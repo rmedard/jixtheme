@@ -24,12 +24,6 @@ selectboxit:
       lib/selectboxit/css/jquery.selectBoxIt.css: {}
   js:
     lib/selectboxit/js/jquery.selectBoxIt.min.js: {}
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery
-    - core/jquery.ui
-    - core/jquery.once
 
 fuelux:
   css:
@@ -37,11 +31,6 @@ fuelux:
       lib/fuelux/css/fuelux.min.css: {}
   js:
     lib/fuelux/js/fuelux.min.js: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
-    - core/jquery.ui
-    - core/jquery.once
 
 bootstrap-social:
   css:
@@ -52,3 +41,8 @@ bootstrap-social:
 custom-scripts:
   js:
     js/custom.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.ui
+    - core/jquery.once
