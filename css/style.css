@@ -7635,6 +7635,10 @@ body,
 .form-control {
   color: #222222;
 }
+body .toolbar-horizontal,
+.form-control .toolbar-horizontal {
+  padding-top: 4px;
+}
 div.super-main .jir-search-bar {
   padding: 9px;
   background: #ecf0f1;
