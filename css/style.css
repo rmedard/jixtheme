@@ -7635,10 +7635,6 @@ body,
 .form-control {
   color: #222222;
 }
-body .toolbar-horizontal,
-.form-control .toolbar-horizontal {
-  padding-top: 4px;
-}
 div.super-main .jir-search-bar {
   padding: 9px;
   background: #ecf0f1;
@@ -7699,9 +7695,6 @@ img.jix-banner-image {
   }
 }
 @media (max-width: 992px) {
-  div.super-main div.main-container {
-    padding-top: 0;
-  }
 }
 header > .container > .navbar-header {
   padding-left: 15px;
@@ -7718,12 +7711,6 @@ aside {
 @media (min-width: 992px) {
   ul.nav-pills > li > a {
     border-radius: 4px 4px 0 0;
-  }
-  .super-main {
-    margin-top: 165px;
-  }
-  .super-main div.main-container div.row > section {
-    min-height: 300px;
   }
   .jir-top-banner {
     display: block;
@@ -7793,7 +7780,7 @@ div.super-featured-jobs > div.view-content > div.media-object .media:last-child 
 .page-header,
 .job-summary-block > .panel-heading {
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 #edit-submit-jobs-view {
   height: 32px;
