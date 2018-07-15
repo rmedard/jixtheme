@@ -35,7 +35,6 @@ fuelux:
 bootstrap-social:
   css:
     theme:
-      lib/font-awesome/css/font-awesome.min.css: {}
       lib/bootstrap-social/bootstrap-social.css: {}
 
 custom-scripts:
