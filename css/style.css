@@ -1,5 +1,4 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7360,6 +7359,24 @@ p:last-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
 }
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v14/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
 .navbar {
   border-width: 0;
 }
@@ -7797,15 +7814,6 @@ div.form-item-field-employer-sector-value > div.select-wrapper {
 div.form-item-field-employer-sector-value > div.select-wrapper select {
   width: inherit;
 }
-.jir-main-footer {
-  background-color: #222222;
-  padding-top: 15px;
-  margin-top: 15px;
-}
-.jir-main-footer .container .footer {
-  padding-top: 10px;
-  margin-top: 10px;
-}
 nav#block-jobstabsmenu > ul.nav-pills {
   font-size: 13px;
 }
@@ -7813,9 +7821,6 @@ nav#block-jobstabsmenu > ul.nav-pills li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.jir-footer-block {
-  border-color: #1fb53b;
 }
 .block-copyright-block {
   color: #ecf0f1;
@@ -7866,9 +7871,6 @@ div.media-object .media {
 }
 div.media-object .media .pull-left {
   width: 100px;
-}
-section#jir-footer > .container > .row > .region {
-  margin-bottom: 10px;
 }
 .region-sidebar-first section {
   margin-bottom: 10px;
