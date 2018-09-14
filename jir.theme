@@ -8,7 +8,7 @@
 
 function jir_preprocess_menu(&$variables) {
 
-    if ($variables['menu_name'] === 'jobs-tabs-menu') {
+    if ($variables['menu_name'] == 'jobs-tabs-menu') {
         $featured = Drupal::entityQuery('node')
             ->condition('type', 'job')
             ->condition('status', 1)
