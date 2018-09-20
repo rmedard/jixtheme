@@ -7910,6 +7910,10 @@ div.form-item-field-employer-sector-value > div.select-wrapper select {
   padding-top: 15px;
   margin-top: 15px;
 }
+.jir-main-footer div.container {
+  padding-left: 0;
+  padding-right: 0;
+}
 .jir-main-footer div.container section#jir-footer > div.container {
   padding-left: 0;
   padding-right: 0;
