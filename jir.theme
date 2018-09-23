@@ -75,6 +75,7 @@ function jir_preprocess_page(&$variables) {
     $page_path = \Drupal::request()->getPathInfo();
     $variables['show_jir_search'] = FALSE;
     $variables['show_sidebars'] = TRUE;
+    $variables['show_footer'] = TRUE;
 
     //    $messenger = Drupal::messenger();
     //    $messenger->addStatus('Actual path:' . $page_path);
@@ -90,6 +91,10 @@ function jir_preprocess_page(&$variables) {
 
     if (preg_match('(/pricing-plans-view)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
+    }
+
+    if (preg_match('(\/manage)', $page_path)) {
+        $variables['show_footer'] = FALSE;
     }
 
     if (preg_match('(/pricing-plans)', $page_path)
