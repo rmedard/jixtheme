@@ -80,6 +80,8 @@ function jir_preprocess_page(&$variables) {
      * This regex accepts paths like "/" only, or "/adverts/*" where *
      * is a word from a-z, no special character.
      */
+    $messenger = Drupal::messenger();
+    $messenger->addStatus('Actual path:' . $page_path);
 
     if (preg_match('\/adverts\/.*', $page_path)) {
         $variables['show_jir_search'] = TRUE;
