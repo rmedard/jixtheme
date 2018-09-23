@@ -49,7 +49,7 @@
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
         <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
-      {% else %}
+      {% elseif current_count != 0 %}
 
           <li{{ item.attributes.addClass(item_classes) }}>
           <a href="{{ item.url }}">{{ item.title | upper | replace({"\n": "", "\r\n": "", "\t": "", "\n\r": ""})}}<span class="badge"> {{ current_count }}</span> </a>
