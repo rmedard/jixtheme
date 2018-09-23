@@ -72,7 +72,7 @@ function jir_preprocess_page(&$variables) {
     $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['contexts'][] = 'url.query_args'; // If you have query args available and want to update cache when they change.
 
-    $page_path = Drupal::request()->getPathInfo();
+    $page_path = \Drupal::request()->getPathInfo();
     $variables['show_jir_search'] = FALSE;
     $variables['show_sidebars'] = TRUE;
 
