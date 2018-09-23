@@ -81,7 +81,7 @@ function jir_preprocess_page(&$variables) {
      * is a word from a-z, no special character.
      */
 
-    if (preg_match('((\/)(adverts\/(([a-z])\w+))?$)', $page_path)) {
+    if (preg_match('\/adverts\/.*', $page_path)) {
         $variables['show_jir_search'] = TRUE;
     }
 
