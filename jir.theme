@@ -83,7 +83,7 @@ function jir_preprocess_page(&$variables) {
     $messenger = Drupal::messenger();
     $messenger->addStatus('Actual path:' . $page_path);
 
-    if (preg_match('\/adverts\/.*', $page_path)) {
+    if (preg_match('(\/adverts\/.*)', $page_path)) {
         $variables['show_jir_search'] = TRUE;
     }
 
