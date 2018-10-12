@@ -34,6 +34,7 @@
                 $(context).find('div#edit-field-job-company-name-wrapper').once(main).append("<div><a href='/node/add/employer'>Vous ne trouvez pas l'employeur? Cliquez ici.</a></div>");
             }
 
+            //Hide super featured jobs box when empty
             const superFeaturedBox = $(context).find('div.super-featured-jobs');
             if ($.trim(superFeaturedBox.text()) === '') {
                 superFeaturedBox.hide();
