@@ -34,7 +34,10 @@
                 $(context).find('div#edit-field-job-company-name-wrapper').once(main).append("<div><a href='/node/add/employer'>Vous ne trouvez pas l'employeur? Cliquez ici.</a></div>");
             }
 
-            $(context).find('div.super-featured-jobs:empty').hide();
+            const superFeaturedBox = $(context).find('div.super-featured-jobs');
+            if ($.trim(superFeaturedBox.text()) === '') {
+                superFeaturedBox.hide();
+            }
         }
     };
 
