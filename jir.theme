@@ -103,5 +103,5 @@ function jir_preprocess_page(&$variables) {
 }
 
 function jir_preprocess_field(&$variables) {
-    kint($variables['entity_type']);
+    kint($variables);
 }
