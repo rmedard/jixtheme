@@ -103,9 +103,9 @@ function jir_preprocess_page(&$variables) {
 }
 
 function jir_preprocess_field(&$variables) {
-    kint($variables['entity_type']);
-    kint($variables['bundle']);
-//    if ($variables['entity_type'] == 'block_content' and $variables['bundle'] == 'banner_block') {
-//        kint($variables);
-//    }
+//    kint($variables['entity_type']);
+//    kint($variables['bundle']);
+    if ($variables['entity_type'] == 'block_content') {
+        kint($variables);
+    }
 }
