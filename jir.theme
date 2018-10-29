@@ -103,10 +103,8 @@ function jir_preprocess_page(&$variables) {
 }
 
 function jir_preprocess_field(&$variables) {
-//    if ($variables['entity_type'] == 'block_content' and $variables['bundle'] == 'banner_block') {
-////        $blockId = intval(->values['id']);
-//
-//        die();
-//    }
-    kint($variables['object']);
+    if ($variables['entity_type'] == 'block_content' and $variables['bundle'] == 'banner_block') {
+//        $blockId = intval(->values['id']);
+        kint($variables[]);
+    }
 }
