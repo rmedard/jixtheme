@@ -109,7 +109,7 @@ function jir_preprocess_field(&$variables) {
     $banner_block = $variables['element']['#object'];
     if ($variables['entity_type'] == 'block_content') {
        // kint($variables['element']['#object']);
-        kint($variables['element']['#object']->type);
+        kint($variables['element']['#object']);
        // kint($variables['element']['#object']->field_banner_url->uri);
         kint($variables['element']['#object']->field_banner_type->value);
         kint($variables['element']['#object']->id());
