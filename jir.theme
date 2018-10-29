@@ -104,6 +104,6 @@ function jir_preprocess_page(&$variables) {
 
 function jir_preprocess_field(&$variables) {
     if ($variables['entity_type'] == 'block_content' and $variables['bundle'] == 'banner_block') {
-        kint($variables['block_content']);
+        kint($variables);
     }
 }
