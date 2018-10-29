@@ -106,17 +106,13 @@ function jir_preprocess_page(&$variables) {
 }
 
 function jir_preprocess_field(&$variables) {
-//    kint($variables['entity_type']);
-//    kint($variables['bundle']);
-//    $custom_block = \Drupal::entityTypeManager()->getStorage('block_content')->load('1');
     $banner_block = $variables['element']['#object'];
 
     if ($banner_block instanceof EntityInterface
-        and $banner_block->getEntityType()->id() == 'block_content') {
-       kint($banner_block->bundle());
+        and $banner_block->getEntityType()->id() == 'block_content' and $banner_block->bundle() == 'banner_block') {
         //kint($variables['element']['#object']->getEntityType());
-        //kint($variables['element']['#object']->field_banner_url->uri);
-        //kint($variables['element']['#object']->field_banner_type->value);
-        //kint($variables['element']['#object']->id());
+        kint($banner_block->field_banner_url->uri);
+        kint($banner_block->field_banner_type->value);
+        kint($banner_block->id());
     }
 }
