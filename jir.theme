@@ -106,7 +106,8 @@ function jir_preprocess_field(&$variables) {
 //    kint($variables['entity_type']);
 //    kint($variables['bundle']);
 //    $custom_block = \Drupal::entityTypeManager()->getStorage('block_content')->load('1');
-    if ($variables['entity_type'] == 'block_content') {
+    $banner_block = $variables['element']['#object'];
+    if ($variables['entity_type'] == 'block_content' and $banner_block->type == 'banner_block') {
         kint($variables['element']['#object']);
         kint($variables['element']['#object']->field_banner_url->uri);
         kint($variables['element']['#object']->field_banner_type->value);
