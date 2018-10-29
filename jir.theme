@@ -1,4 +1,7 @@
 <?php
+
+use Drupal\Core\Entity\EntityInterface;
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -108,12 +111,12 @@ function jir_preprocess_field(&$variables) {
 //    $custom_block = \Drupal::entityTypeManager()->getStorage('block_content')->load('1');
     $banner_block = $variables['element']['#object'];
 
-    if ($banner_block instanceof \Drupal\Core\Entity\EntityInterface
+    if ($banner_block instanceof EntityInterface
         and $banner_block->getEntityType()->id() == 'block_content') {
-       // kint($variables['element']['#object']);
-        kint($variables['element']['#object']->getEntityType());
-       // kint($variables['element']['#object']->field_banner_url->uri);
-        kint($variables['element']['#object']->field_banner_type->value);
-        kint($variables['element']['#object']->id());
+       kint($banner_block->bundle());
+        //kint($variables['element']['#object']->getEntityType());
+        //kint($variables['element']['#object']->field_banner_url->uri);
+        //kint($variables['element']['#object']->field_banner_type->value);
+        //kint($variables['element']['#object']->id());
     }
 }
