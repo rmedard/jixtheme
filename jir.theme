@@ -77,9 +77,6 @@ function jir_preprocess_page(&$variables) {
     $variables['show_sidebars'] = TRUE;
     $variables['show_footer'] = TRUE;
 
-    //    $messenger = Drupal::messenger();
-    //    $messenger->addStatus('Actual path:' . $page_path);
-
     /*
      * This regex accepts paths like "/" only, or "/adverts/*" where *
      * is a word from a-z, no special character.
