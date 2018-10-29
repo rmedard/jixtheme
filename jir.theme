@@ -106,6 +106,6 @@ function jir_preprocess_field(&$variables) {
 //    kint($variables['entity_type']);
 //    kint($variables['bundle']);
     if ($variables['entity_type'] == 'block_content') {
-        kint($variables['object']);
+        kint($variables['block_content']);
     }
 }
