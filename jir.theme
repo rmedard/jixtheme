@@ -113,6 +113,6 @@ function jir_preprocess_field(&$variables) {
         //kint($variables['element']['#object']->getEntityType());
         kint($banner_block->field_banner_url->uri);
         kint($banner_block->field_banner_type->value);
-        kint($banner_block->id());
+        kint($banner_block->field_banner_img->entity->uri->value);
     }
 }
