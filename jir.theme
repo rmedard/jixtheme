@@ -101,3 +101,7 @@ function jir_preprocess_page(&$variables) {
         $variables['show_sidebars'] = FALSE;
     }
 }
+
+function jir_preprocess_field(&$variables) {
+    kint($variables['entity_type']);
+}

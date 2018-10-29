@@ -63,7 +63,6 @@
         {% endfor %}
     {% endif %}
 {% else %}
-    <p>Label is not hidden. Field type: {{ entity_type }}</p>
     <div{{ attributes.addClass(classes) }}>
         <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
         {% if multiple %}
