@@ -40,8 +40,11 @@
 #}
 
 <div>
-    <a href="{{ banner_url }}" target="_blank">
-        <img alt="" class="jix-banner-image" src="{{ banner_image_url | image_style(style | s) }}"/>
-    </a>
+    <p>{{ banner_url }}</p>
+    <p>{{ banner_image_url }}</p>
+    <p>{{ style }}</p>
+    {#<a href="{{ banner_url }}" target="_blank">#}
+        {#<img alt="" class="jix-banner-image" src="{{ banner_image_url | image_style(style | s) }}"/>#}
+    {#</a>#}
 </div>
 
