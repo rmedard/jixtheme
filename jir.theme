@@ -11,7 +11,7 @@ use Drupal\Core\Entity\EntityInterface;
 
 function jir_preprocess_menu(&$variables) {
 
-    if ($variables['menu_name'] == 'jobs-tabs-menu') {
+    if (isset($variables['menu_name']) and $variables['menu_name'] == 'jobs-tabs-menu') {
         $featured = Drupal::entityQuery('node')
             ->condition('type', 'job')
             ->condition('status', 1)
