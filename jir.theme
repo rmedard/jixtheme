@@ -110,7 +110,10 @@ function jir_preprocess_field(&$variables) {
     if ($banner_block instanceof EntityInterface
         and $banner_block->getEntityType()->id() == 'block_content'
         and $banner_block->bundle() == 'banner_block') {
-        $variables['banner_image_url'] = file_create_url($banner_block->field_banner_img->entity->uri->value);
+
+        $style = \Drupal::entityTypeManager()->getStorage('image_style')
+            ->load('vertical_single_column_banner_style');
+        $variables['banner_image_url'] = file_create_url($style->buildUrl($banner_block->field_banner_img->entity->uri->value));
         switch ($banner_block->field_banner_type->value) {
             case 'th':
                 $variables['style'] = 'top_horizontal_banner_style';
