@@ -38,13 +38,6 @@
  * @see template_preprocess_field()
  */
 #}
-{% if banner_type == 'th' %}
-    {% set style = 'top_horizontal_banner_style' %}
-{% elseif banner_type == 'scs' %}
-    {% set style = 'vertical_single_column_banner_style' %}
-{% elseif banner_type == 'dcs' %}
-    {% set style = 'vertical_double_column_banner_style' %}
-{% endif %}
 
 <div>
     <a href="{{ banner_url }}" target="_blank">
