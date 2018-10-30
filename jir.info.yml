@@ -34,4 +34,4 @@ libraries:
   - 'jir/global-styling'
 
 dependencies:
-  - 'twig-tweak'
+  - twig_tweak:twig_tweak
