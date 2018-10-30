@@ -107,12 +107,11 @@ function jir_preprocess_page(&$variables) {
 
 function jir_preprocess_field(&$variables) {
     $banner_block = $variables['element']['#object'];
-
     if ($banner_block instanceof EntityInterface
-        and $banner_block->getEntityType()->id() == 'block_content' and $banner_block->bundle() == 'banner_block') {
-        //kint($variables['element']['#object']->getEntityType());
-        kint($banner_block->field_banner_url->uri);
-        kint($banner_block->field_banner_type->value);
-        kint(file_create_url($banner_block->field_banner_img->entity->uri->value));
+        and $banner_block->getEntityType()->id() == 'block_content'
+        and $banner_block->bundle() == 'banner_block') {
+        $variables['banner_image_url'] = file_create_url($banner_block->field_banner_img->entity->uri->value);
+        $variables['banner_type'] = $banner_block->field_banner_type->value;
+        $variables['banner_url'] = $banner_block->field_banner_url->uri;
     }
 }
