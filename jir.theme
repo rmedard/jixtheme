@@ -126,9 +126,12 @@ function jir_preprocess_field(&$variables) {
                 $imageStyle = 'vertical_single_column_banner_style';
         }
         $variables['image_class'] = $imageClass;
-        $imageStyleManager = \Drupal::entityTypeManager()->getStorage('image_style')
-            ->load($imageStyle);
-        $variables['banner_image_url'] = file_create_url($imageStyleManager->buildUrl($banner_block->field_banner_img->entity->uri->value));
+        if (isset($imageStyle) && !empty($imageStyle)) {
+            $imageStyleManager = \Drupal::entityTypeManager()->getStorage('image_style')->load($imageStyle);
+            $variables['banner_image_url'] = file_create_url($imageStyleManager->buildUrl($banner_block->field_banner_img->entity->uri->value));
+        } else {
+            $variables['banner_image_url'] = file_create_url($banner_block->field_banner_img->entity->uri->value);
+        }
         $variables['banner_url'] = $banner_block->field_banner_url->uri;
     }
 }
