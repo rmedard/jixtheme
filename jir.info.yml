@@ -32,3 +32,6 @@ libraries:
   - 'jir/bootstrap-social'
   - 'jir/custom-scripts'
   - 'jir/global-styling'
+
+dependencies:
+  - twig_tweak:twig_tweak

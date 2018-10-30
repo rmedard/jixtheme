@@ -1,4 +1,7 @@
 <?php
+
+use Drupal\Core\Entity\EntityInterface;
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -103,13 +106,27 @@ function jir_preprocess_page(&$variables) {
 }
 
 function jir_preprocess_field(&$variables) {
-//    kint($variables['entity_type']);
-//    kint($variables['bundle']);
-//    $custom_block = \Drupal::entityTypeManager()->getStorage('block_content')->load('1');
-    if ($variables['entity_type'] == 'block_content') {
-        kint($variables['element']['#object']);
-        kint($variables['element']['#object']->field_banner_url->uri);
-        kint($variables['element']['#object']->field_banner_type->value);
-        kint($variables['element']['#object']->id());
+    $banner_block = $variables['element']['#object'];
+    if ($banner_block instanceof EntityInterface
+        and $banner_block->getEntityType()->id() == 'block_content'
+        and $banner_block->bundle() == 'banner_block') {
+
+        switch ($banner_block->field_banner_type->value) {
+            case 'th':
+                $imageStyle = 'top_horizontal_banner_style';
+                break;
+            case 'scs':
+                $imageStyle = 'vertical_single_column_banner_style';
+                break;
+            case 'dcs':
+                $imageStyle = 'vertical_double_column_banner_style';
+                break;
+            default:
+                $imageStyle = 'vertical_single_column_banner_style';
+        }
+        $imageStyleManager = \Drupal::entityTypeManager()->getStorage('image_style')
+            ->load($imageStyle);
+        $variables['banner_image_url'] = file_create_url($imageStyleManager->buildUrl($banner_block->field_banner_img->entity->uri->value));
+        $variables['banner_url'] = $banner_block->field_banner_url->uri;
     }
 }
