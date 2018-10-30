@@ -7771,8 +7771,7 @@ span.employer-name > a:hover,
 .block-entity-fieldnodetitle > span {
   font-size: large;
 }
-div.jir-search-textfield > div.input-group,
-img.jix-banner-image {
+div.jir-search-textfield > div.input-group {
   width: 100%;
 }
 @media (max-width: 768px) {
