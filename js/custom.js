@@ -84,7 +84,8 @@
                     '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
                     '                    </div>\n' +
                     '                </div>');
-                searchBar.remove();
+                $('div.jix-search-bar').remove();
+                // searchBar.remove();
                 content.insertBefore($('div.main-container'));
             }
         }
