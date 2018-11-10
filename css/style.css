@@ -7845,20 +7845,17 @@ aside {
   background-color: #2C3E50;
 }
 #block-jobstabsmenu,
-.media-object > .media,
+.media-object > .media:not(:last-child),
 .view-display-id-block_jobs_per_employer > div.view-content > div.views-row {
   border-bottom: #881300 2px solid;
 }
 #block-jobstabsmenu .pull-left,
-.media-object > .media .pull-left,
+.media-object > .media:not(:last-child) .pull-left,
 .view-display-id-block_jobs_per_employer > div.view-content > div.views-row .pull-left {
   line-height: 90px;
 }
-div.super-featured-jobs > div.view-content > div.media-object .media {
+div.super-featured-jobs > div.view-content > div.media-object .media:not(:last-child) {
   border-bottom: 2px solid #b3b3b3;
-}
-div.super-featured-jobs > div.view-content > div.media-object .media:last-child {
-  border-bottom: none;
 }
 .block-views-blockjobs-block-jobs-per-employer h2 {
   margin-top: 0;

@@ -151,7 +151,7 @@ aside {
     background-color: @brand-info;
 }
 
-#block-jobstabsmenu, .media-object > .media,
+#block-jobstabsmenu, .media-object > .media:not(:last-child),
 .view-display-id-block_jobs_per_employer > div.view-content > div.views-row {
     border-bottom: @brand-primary 2px solid;
     .pull-left {
@@ -160,11 +160,8 @@ aside {
 }
 
 div.super-featured-jobs > div.view-content > div.media-object {
-    .media {
+    .media:not(:last-child) {
         border-bottom: 2px solid #b3b3b3;
-    }
-    .media:last-child {
-        border-bottom: none;
     }
 }
 
