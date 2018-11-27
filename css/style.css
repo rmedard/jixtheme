@@ -8018,3 +8018,6 @@ div.view-display-id-block_jobs_per_employer > div.view-content > div.views-row {
 div.apply-btn-block {
   float: right;
 }
+div.apply-btn-block a {
+  width: 100px;
+}
