@@ -40,6 +40,9 @@
                 superFeaturedBox.hide();
             }
 
+            var input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
+            window.intlTelInput(input);
+
             if (isMobile.any()) {
                 $('nav#block-jobstabsmenu > ul.nav-pills').removeClass('nav-justified');
                 let searchBar = $('div#search-bar-input-form');
