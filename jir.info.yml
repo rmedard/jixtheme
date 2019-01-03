@@ -30,6 +30,7 @@ regions:
 libraries:
   - 'jir/bootstrap-scripts'
   - 'jir/bootstrap-social'
+  - 'jir/select2-bootstrap'
   - 'jir/custom-scripts'
   - 'jir/global-styling'
 
