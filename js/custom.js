@@ -41,11 +41,11 @@
             }
 
             // select#edit-field-job-categorie
-            // var input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            // window.intlTelInput(input);
+            var input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
+            window.intlTelInput(input);
             $('#edit-field-job-categorie').select2({
                 theme: "bootstrap"
-            }).attr('placeholder', 'Sélectionner les catégories');
+            });
 
             if (isMobile.any()) {
                 $('nav#block-jobstabsmenu > ul.nav-pills').removeClass('nav-justified');
