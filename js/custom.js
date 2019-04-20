@@ -51,7 +51,7 @@
             });
 
             if (isMobile.any()) {
-                $('nav#block-jobstabsmenu > ul.nav-pills').removeClass('nav-justified');
+                $('nav#block-jobstabsmenu > ul').removeClass('nav-justified');
                 let searchBar = $('div#search-bar-input-form');
                 if (searchBar.length) {
                     let searchBarHtml = searchBar.html();
