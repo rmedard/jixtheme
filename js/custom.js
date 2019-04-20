@@ -46,7 +46,7 @@
             $('#edit-field-job-categorie').select2({
                 theme: "bootstrap"
             });
-            $('#edit-field-employer-sector').select2({
+            $('#edit-field-employer-secteur').select2({
                theme: "bootstrap"
             });
 
