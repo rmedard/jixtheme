@@ -40,6 +40,8 @@
                 superFeaturedBox.hide();
             }
 
+            $.fn.select2.defaults.set( "theme", "bootstrap" );
+
             // select#edit-field-job-categorie
             const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
             window.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
