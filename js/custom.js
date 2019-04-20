@@ -46,6 +46,9 @@
             $('#edit-field-job-categorie').select2({
                 theme: "bootstrap"
             });
+            $('#edit-field-employer-sector').select2({
+               theme: "bootstrap"
+            });
 
             if (isMobile.any()) {
                 $('nav#block-jobstabsmenu > ul.nav-pills').removeClass('nav-justified');
