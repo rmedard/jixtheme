@@ -16,14 +16,14 @@
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(main).addClass('active');
             }
 
-            $(context).find('form#views-exposed-form-adverts-page-search-ads input').once(main).addClass('input-sm');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads div.input-group > span').once(main).addClass('input-sm');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads select').once(main).addClass('input-sm');
-
-            $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine').once(main).addClass('col-lg-6 col-md-6');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine > div.input-group').once(main).css('width', '100%');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-field-employer-sector-value').once(main).addClass('col-lg-4 col-md-4');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-actions').once(main).addClass('col-lg-2 col-md-2');
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads input').once(main).addClass('input-sm');
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads div.input-group > span').once(main).addClass('input-sm');
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads select').once(main).addClass('input-sm');
+            //
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine').once(main).addClass('col-lg-6 col-md-6');
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-combine > div.input-group').once(main).css('width', '100%');
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-item-field-employer-sector-value').once(main).addClass('col-lg-4 col-md-4');
+            // $(context).find('form#views-exposed-form-adverts-page-search-ads > div > div.form-actions').once(main).addClass('col-lg-2 col-md-2');
 
             $(context).find('div.field--name-field-application-form > a').once(main).addClass('btn btn-success btn-xs btn-block');
 
