@@ -45,12 +45,12 @@
             // select#edit-field-job-categorie
             const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
             window.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
-            $('#edit-field-job-categorie').select2({
-                theme: "bootstrap"
-            });
-            $("#edit-field-employer-secteur").select2({
-                theme: "bootstrap"
-            });
+            // $('#edit-field-job-categorie').select2({
+            //     theme: "bootstrap"
+            // });
+            // $("#edit-field-employer-secteur").select2({
+            //     theme: "bootstrap"
+            // });
 
             if (isMobile.any()) {
                 $('nav#block-jobstabsmenu > ul').removeClass('nav-justified');
