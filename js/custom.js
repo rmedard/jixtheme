@@ -24,7 +24,7 @@
             $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-item-combine div.input-group').once(main).css('width', '100%');
             $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-item-field-job-categorie-target-id').once(main).addClass('col-lg-4 col-md-4');
             $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-item-field-job-categorie-target-id div.select-wrapper').once(main).css('width', '100%');
-            $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-item-field-job-categorie-target-id div.select-wrapper select').once(main).css('width', '100%');
+            $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-item-field-job-categorie-target-id div.select-wrapper select.form-select').once(main).css('width', '100%');
 
             $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-actions').once(main).addClass('col-lg-2 col-md-2');
             $(context).find('form#views-exposed-form-adverts-page-search-ads div.form-actions button').once(main).css('width', '100%');
