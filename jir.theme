@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
 use Drupal\Core\Entity\EntityInterface;
 
 /**
@@ -139,8 +141,14 @@ function jir_preprocess_field(&$variables) {
         }
         $variables['image_class'] = $imageClass;
         if (isset($imageStyle) && !empty($imageStyle)) {
-            $imageStyleManager = Drupal::entityTypeManager()->getStorage('image_style')->load($imageStyle);
-            $variables['banner_image_url'] = file_create_url($imageStyleManager->buildUrl($banner_block->field_banner_img->entity->uri->value));
+            try {
+                $imageStyleManager = Drupal::entityTypeManager()->getStorage('image_style')->load($imageStyle);
+                $variables['banner_image_url'] = file_create_url($imageStyleManager->buildUrl($banner_block->field_banner_img->entity->uri->value));
+            } catch (InvalidPluginDefinitionException $e) {
+                Drupal::logger('jix_theme')->error('Invalid plugin: ' . $e->getMessage());
+            } catch (PluginNotFoundException $e) {
+                Drupal::logger('jix_theme')->error('Plugin not found: ' . $e->getMessage());
+            }
         } else {
             $variables['banner_image_url'] = file_create_url($banner_block->field_banner_img->entity->uri->value);
         }
@@ -149,11 +157,10 @@ function jir_preprocess_field(&$variables) {
 }
 
 function jir_preprocess_block(&$variables) {
-//    kint($variables);
-//    die();
+
+    // Disable caching for concerned blocks
     $disableCacheBlocks = array('adverts-page_search_ads');
     if (in_array($variables['derivative_plugin_id'], $disableCacheBlocks)) {
-        Drupal::logger('Jix Theme')->info('Block ID:' . $variables['derivative_plugin_id']);
         $variables['#cache']['max-age'] = 0;
     }
 }
