@@ -147,3 +147,9 @@ function jir_preprocess_field(&$variables) {
         $variables['banner_url'] = $banner_block->field_banner_url->uri;
     }
 }
+
+function jir_preprocess_block(&$variables) {
+    if ($variables['derivative_plugin_id'] == 'formulaireexposeadvertspage_search_ads') {
+        $variables['#cache']['max-age'] = 0;
+    }
+}
