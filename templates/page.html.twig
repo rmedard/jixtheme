@@ -106,7 +106,8 @@
 
 <div class="super-main">
 {% if page.jir_search_bar and show_jir_search %}
-    {% block jir_search_bar %}
+
+    {% set search_bar_html = '
         <div class = "container-fluid jir-search-bar">
             <div class="container">
                 <div class="row">
@@ -115,7 +116,33 @@
                 </div>
             </div>
         </div>
+    ' %}
+
+    {% block jir_search_bar %}
+{#        <div class = "container-fluid jir-search-bar">#}
+{#            <div class="container">#}
+{#                <div class="row">#}
+{#                    <div id="search-bar-left" class="col-lg-10 col-md-10 col-sm-12">{{ page.jir_search_bar }}</div>#}
+{#                    <div id="search-bar-right" class="col-lg-2 col-md-2 col-sm-12">{{ page.jir_upload_cv }}</div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+        {{ search_bar_html|raw }}
     {% endblock %}
+
+{#    <div class="panel-group">#}
+{#        <div class="panel panel-default">#}
+{#            <div class="panel-heading">#}
+{#                <h4 class="panel-title">#}
+{#                    <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>#}
+{#                </h4>#}
+{#            </div>#}
+{#            <div id="collapse1" class="panel-collapse collapse">#}
+{#                <div class="panel-body">Panel Body</div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
 {% endif %}
 {# Main #}
 {% block main %}
