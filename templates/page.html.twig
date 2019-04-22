@@ -111,9 +111,10 @@
         <div class="panel-group">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse-bar-html">Search</a>
-                    </h4>
+{#                    <h4 class="panel-title">#}
+{#                        <a data-toggle="collapse" href="#collapse-bar-html">Search</a>#}
+{#                    </h4>#}
+                    <a href="#collapse-bar-html" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>
                 </div>
                 <div id="collapse-bar-html" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -122,7 +123,9 @@
                 </div>
             </div>
         </div>
-        {{ page.jir_upload_cv }}
+        <div class="row">
+            {{ page.jir_upload_cv }}
+        </div>
     {% else %}
         {% block jir_search_bar %}
             <div class = "container-fluid jir-search-bar">
