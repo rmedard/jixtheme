@@ -93,7 +93,15 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    {{ drupal_field('field_employer_telephone', 'node', node.id) }}
+    <div class="row">
+      <div class="col-md-3">
+        {{ drupal_field('field_employer_logo', 'node', node.id) }}
+      </div>
+      <div class="col-md-9">
+        {{ drupal_field('field_employer_summary', 'node', node.id) }}
+        {{ drupal_field('field_employer_telephone', 'node', node.id) }}
+      </div>
+    </div>
     {{ content }}
   </div>
 
