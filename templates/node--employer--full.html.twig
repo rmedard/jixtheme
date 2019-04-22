@@ -93,6 +93,7 @@
   {% endif %}
 
   <div{{ content_attributes }}>
+    {{ drupal_field('field_employer_telephone', 'node', node.id) }}
     {{ content }}
   </div>
 
