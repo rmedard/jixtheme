@@ -7808,6 +7808,9 @@ div.jir-search-textfield > div.input-group {
   div.super-main {
     padding-top: 0;
   }
+  div.super-main div#search-bar-right {
+    margin-top: 10px;
+  }
 }
 form#views-exposed-form-adverts-page-search-ads div.form-item-combine div.input-group {
   width: 100%;
