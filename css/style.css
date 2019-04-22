@@ -7986,6 +7986,8 @@ div.employer-thumbnail div.employer-thumb-logo {
   line-height: 100px;
 }
 div.media-object .media {
+  display: flex;
+  align-items: center;
   padding-bottom: 10px;
 }
 div.media-object .media .pull-left {
