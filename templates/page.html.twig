@@ -117,18 +117,12 @@
                 </div>
                 <div id="collapse-bar-html" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <div class = "container-fluid jir-search-bar">
-                            <div class="container">
-                                <div class="row">
-                                    <div id="search-bar-left" class="col-lg-10 col-md-10 col-sm-12">{{ page.jir_search_bar }}</div>
-                                    <div id="search-bar-right" class="col-lg-2 col-md-2 col-sm-12">{{ page.jir_upload_cv }}</div>
-                                </div>
-                            </div>
-                        </div>
+                        {{ page.jir_search_bar }}
                     </div>
                 </div>
             </div>
         </div>
+        {{ page.jir_upload_cv }}
     {% else %}
         {% block jir_search_bar %}
             <div class = "container-fluid jir-search-bar">
