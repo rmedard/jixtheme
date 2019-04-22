@@ -149,7 +149,7 @@ function jir_preprocess_field(&$variables) {
 }
 
 function jir_preprocess_block(&$variables) {
-    $disableCacheBlocks = array('formulaireexposeadvertspage_search_ads');
+    $disableCacheBlocks = array('block-formulaireexposeadvertspage-search-ads');
     if (in_array($variables['derivative_plugin_id'], $disableCacheBlocks)) {
         Drupal::logger('Jix Theme')->info('Block ID:' . $variables['derivative_plugin_id']);
         $variables['#cache']['max-age'] = 0;
