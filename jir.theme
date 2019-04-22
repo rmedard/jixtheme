@@ -11,6 +11,12 @@ use Drupal\Core\Entity\EntityInterface;
 
 function jir_preprocess_menu(&$variables) {
 
+    $variables['is_mobile'] = FALSE;
+    $detect = new Mobile_Detect;
+    if ($detect->isMobile()) {
+        $variables['is_mobile'] = TRUE;
+    }
+
     if (isset($variables['menu_name']) and $variables['menu_name'] == 'jobs-tabs-menu') {
         $featured = Drupal::entityQuery('node')
             ->condition('type', 'job')
@@ -75,7 +81,7 @@ function jir_preprocess_page(&$variables) {
     $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['contexts'][] = 'url.query_args'; // If you have query args available and want to update cache when they change.
 
-    $page_path = \Drupal::request()->getPathInfo();
+    $page_path = Drupal::request()->getPathInfo();
     $variables['show_jir_search'] = FALSE;
     $variables['show_sidebars'] = TRUE;
     $variables['show_footer'] = TRUE;
@@ -85,7 +91,7 @@ function jir_preprocess_page(&$variables) {
      * is a word from a-z, no special character.
      */
 
-    if (\Drupal::service('path.matcher')->isFrontPage() or preg_match('(\/adverts\/.*)', $page_path)) {
+    if (Drupal::service('path.matcher')->isFrontPage() or preg_match('(\/adverts\/.*)', $page_path)) {
         $variables['show_jir_search'] = TRUE;
     }
 
@@ -99,7 +105,7 @@ function jir_preprocess_page(&$variables) {
         $variables['show_sidebars'] = FALSE;
     }
 
-    $exception = \Drupal::request()->attributes->get('exception');
+    $exception = Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_sidebars'] = FALSE;
     }
@@ -127,7 +133,7 @@ function jir_preprocess_field(&$variables) {
         }
         $variables['image_class'] = $imageClass;
         if (isset($imageStyle) && !empty($imageStyle)) {
-            $imageStyleManager = \Drupal::entityTypeManager()->getStorage('image_style')->load($imageStyle);
+            $imageStyleManager = Drupal::entityTypeManager()->getStorage('image_style')->load($imageStyle);
             $variables['banner_image_url'] = file_create_url($imageStyleManager->buildUrl($banner_block->field_banner_img->entity->uri->value));
         } else {
             $variables['banner_image_url'] = file_create_url($banner_block->field_banner_img->entity->uri->value);
