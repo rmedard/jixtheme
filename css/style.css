@@ -7742,6 +7742,12 @@ a.list-group-item-danger.active:focus {
 body .super-main {
   padding-top: 90px;
 }
+body label.error {
+  color: #E74C3C;
+}
+body input.error {
+  border-color: #E74C3C;
+}
 body,
 .form-control {
   color: #222222;

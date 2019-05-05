@@ -12,400 +12,410 @@
 @dark-green: #19826d;
 
 body {
-    .super-main {
-        padding-top: 90px;
-    }
+  .super-main {
+    padding-top: 90px;
+  }
+
+  label.error {
+    color: @brand-danger;
+  }
+
+  input.error {
+    border-color: @brand-danger;
+  }
 }
 
 body, .form-control {
-    color: @gray-darker;
+  color: @gray-darker;
 }
 
 div.super-main {
-    .jir-search-bar {
-        padding: 9px;
-        background: @gray-lighter;
-    }
+  .jir-search-bar {
+    padding: 9px;
+    background: @gray-lighter;
+  }
 }
 
 .jir-top-banner {
-    display: none;
+  display: none;
 }
 
 nav#block-jir-main-menu {
-    ul.menu > li {
-        a.is-active {
-            font-weight: bolder;
-        }
+  ul.menu > li {
+    a.is-active {
+      font-weight: bolder;
     }
+  }
 }
 
 .media-heading {
-    font-size: x-large;
+  font-size: x-large;
 
-    a:hover {
-        text-decoration: none;
-        color: @dark-green;
-    }
+  a:hover {
+    text-decoration: none;
+    color: @dark-green;
+  }
 }
 
 span.employer-name > a:hover, .block-entity-fieldnodetitle > span > a:hover {
-    text-decoration: none;
-    color: @dark-green;
+  text-decoration: none;
+  color: @dark-green;
 }
 
 .block-entity-fieldnodetitle > span {
-    font-size: large;
+  font-size: large;
 }
 
 div.jir-search-textfield > div.input-group {
-    width: 100%;
+  width: 100%;
 }
 
 @media (max-width: @screen-sm) {
-    header#navbar {
-        background-color: @gray-lighter;
-        border-bottom: 1px @brand-primary solid;
+  header#navbar {
+    background-color: @gray-lighter;
+    border-bottom: 1px @brand-primary solid;
 
-        div.container > div.navbar-header {
-            border-bottom: 1px @brand-primary solid;
+    div.container > div.navbar-header {
+      border-bottom: 1px @brand-primary solid;
 
-            div.region-navigation > .navbar-text {
-                display: none;
-            }
-        }
+      div.region-navigation > .navbar-text {
+        display: none;
+      }
+    }
+  }
+
+  button.navbar-toggle {
+    background-color: @brand-primary;
+  }
+
+  button[aria-expanded='true'] {
+    background: darken(@brand-primary, 13, 5%);
+  }
+
+  nav#block-jir-main-menu {
+    ul.menu > li {
+      a {
+        color: @gray-darker;
+      }
+
+      a.is-active {
+        color: @gray-lighter;
+      }
     }
 
-    button.navbar-toggle {
-        background-color: @brand-primary;
+    ul.menu > li:hover {
+      background-color: @gray-light;
     }
+  }
 
-    button[aria-expanded='true'] {
-        background: darken(@brand-primary, 13, 5%);
-    }
-
-    nav#block-jir-main-menu {
-        ul.menu > li {
-            a {
-                color: @gray-darker;
-            }
-
-            a.is-active {
-                color: @gray-lighter;
-            }
-        }
-
-        ul.menu > li:hover {
-            background-color: @gray-light;
-        }
-    }
-
-    a#post-advert-button {
-        width: 100%;
-    }
+  a#post-advert-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: @screen-md-min) {
-    div.super-main {
-        padding-top: 0;
+  div.super-main {
+    padding-top: 0;
 
-        div#search-bar-right{
-            margin-top: 10px;
-        }
+    div#search-bar-right {
+      margin-top: 10px;
     }
+  }
 }
 
 form#views-exposed-form-adverts-page-search-ads {
-    div.form-item-combine div.input-group {
-        width: 100%;
-    }
+  div.form-item-combine div.input-group {
+    width: 100%;
+  }
 
-    div.form-item-field-job-categorie-target-id div.select-wrapper {
-        width: 100%;
-        select#edit-field-job-categorie-target-id {
-            width: 100%;
-        }
-    }
+  div.form-item-field-job-categorie-target-id div.select-wrapper {
+    width: 100%;
 
-    div.form-actions button {
-        width: 100%;
+    select#edit-field-job-categorie-target-id {
+      width: 100%;
     }
+  }
+
+  div.form-actions button {
+    width: 100%;
+  }
 }
 
 header > .container > .navbar-header {
-    padding-left: 15px;
+  padding-left: 15px;
 
-    .region-navigation > a.logo > img {
-        height: 45px;
-    }
+  .region-navigation > a.logo > img {
+    height: 45px;
+  }
 }
 
 aside {
-    padding-top: @jir-top-height;
+  padding-top: @jir-top-height;
 }
 
 #block-jobstabsmenu {
-    margin-top: @jir-top-height;
+  margin-top: @jir-top-height;
 }
 
 @media (min-width: @screen-md-min) {
 
-    ul.nav-pills > li > a {
-        border-radius: 4px 4px 0 0;
-    }
+  ul.nav-pills > li > a {
+    border-radius: 4px 4px 0 0;
+  }
 
-    .jir-top-banner {
-        display: block;
-        background-color: white;
-    }
+  .jir-top-banner {
+    display: block;
+    background-color: white;
+  }
 
-    header > .container > .navbar-header {
-        display: none;
-    }
+  header > .container > .navbar-header {
+    display: none;
+  }
 }
 
 @media (max-width: @screen-xs-max) {
-    #jix_social_buttons_block > div {
-        margin-bottom: 2px;
-    }
+  #jix_social_buttons_block > div {
+    margin-bottom: 2px;
+  }
 }
 
 .badge-danger {
-    background-color: @brand-danger;
+  background-color: @brand-danger;
 }
 
 .badge-info {
-    background-color: @brand-info;
+  background-color: @brand-info;
 }
 
 #block-jobstabsmenu, .media-object > .media:not(:last-child),
 .view-display-id-block_jobs_per_employer > div.view-content > div.views-row {
-    border-bottom: @brand-primary 2px solid;
+  border-bottom: @brand-primary 2px solid;
 
-    .pull-left {
-        line-height: 90px;
-    }
+  .pull-left {
+    line-height: 90px;
+  }
 }
 
 div.super-featured-jobs > div.view-content > div.media-object {
-    .media:not(:last-child) {
-        border-bottom: 2px solid #b3b3b3;
-    }
+  .media:not(:last-child) {
+    border-bottom: 2px solid #b3b3b3;
+  }
 }
 
 .block-views-blockjobs-block-jobs-per-employer {
-    h2 {
-        margin-top: 0;
-        text-align: center;
-    }
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 .vote-vote-votingapi-fivestar-form > div.form-type-select > div.select-wrapper::after {
-    display: none;
+  display: none;
 }
 
 .pricing-plan-block {
-    margin-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .jir-pricing-plan, .view-display-id-page_pricing_plans > div.view-header {
-    text-align: center;
+  text-align: center;
 
-    .panel-heading {
-        font-size: x-large;
-    }
+  .panel-heading {
+    font-size: x-large;
+  }
 
-    .jir-pricing-price {
-        font-weight: bolder;
-        font-variant: small-caps;
-        font-size: xx-large;
-        background-color: @gray-lighter;
-    }
+  .jir-pricing-price {
+    font-weight: bolder;
+    font-variant: small-caps;
+    font-size: xx-large;
+    background-color: @gray-lighter;
+  }
 }
 
 .region-highlighted {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .page-header, .job-summary-block > .panel-heading {
-    text-align: center;
-    margin-bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 #edit-submit-jobs-view {
-    height: 32px;
+  height: 32px;
 }
 
 button#edit-submit-jobs {
-    width: 100%;
+  width: 100%;
 }
 
 div.form-item-field-employer-sector-value > div.select-wrapper {
-    width: 100%;
+  width: 100%;
 
-    select {
-        width: inherit;
-    }
+  select {
+    width: inherit;
+  }
 }
 
 .jir-main-footer {
-    background-color: @gray-darker;
+  background-color: @gray-darker;
+  padding-top: 15px;
+  margin-top: 15px;
+  padding-right: 0;
+  padding-left: 0;
+
+  div.container {
+    section#jir-footer {
+      div.row > div.region {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 0;
     padding-top: 15px;
-    margin-top: 15px;
-    padding-right: 0;
-    padding-left: 0;
-
-    div.container {
-        section#jir-footer {
-            div.row > div.region {
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    footer {
-        margin-top: 0;
-        padding-top: 15px;
-        background-color: darken(@gray-darker, 5%);
-        border: none;
-        padding-bottom: 15px;
-    }
+    background-color: darken(@gray-darker, 5%);
+    border: none;
+    padding-bottom: 15px;
+  }
 }
 
 nav#block-jobstabsmenu > ul.nav-pills {
-    font-size: 13px;
+  font-size: 13px;
 
-    li {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+  li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 .block-copyright-block {
-    color: @gray-lighter;
+  color: @gray-lighter;
 }
 
 .job-summary-block > ul {
-    font-size: smaller;
+  font-size: smaller;
 
-    li {
-        padding: 5px;
-    }
+  li {
+    padding: 5px;
+  }
 
-    li.job-views-count {
-        background: @gray-lighter;
-        color: @brand-danger;
-        font-weight: bold;
-    }
+  li.job-views-count {
+    background: @gray-lighter;
+    color: @brand-danger;
+    font-weight: bold;
+  }
 
-    li.job-apply-btn {
-        text-align: center;
-    }
+  li.job-apply-btn {
+    text-align: center;
+  }
 }
 
 div.site-details {
-    font-size: smaller;
+  font-size: smaller;
 
-    a:hover {
-        text-decoration: none;
-        color: @dark-green;
-    }
+  a:hover {
+    text-decoration: none;
+    color: @dark-green;
+  }
 }
 
 div.job-teaser-left {
-    width: 100px;
-    line-height: 100px;
+  width: 100px;
+  line-height: 100px;
 }
 
 div.jir-footer-block, #block-views-block-jobs-block-single-job-2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 div.alert {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 div.employer-thumbnail {
-    text-align: center;
+  text-align: center;
 
-    div.caption {
-        width: 100%;
-    }
+  div.caption {
+    width: 100%;
+  }
 
-    div.employer-thumb-logo {
-        line-height: 100px;
-    }
+  div.employer-thumb-logo {
+    line-height: 100px;
+  }
 }
 
 div.media-object {
-    .media {
-        display: flex;
-        align-items: center;
-        padding-bottom: 10px;
+  .media {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
 
-        .pull-left {
-            width: 100px;
-        }
+    .pull-left {
+      width: 100px;
     }
+  }
 }
 
 .region-sidebar-first {
-    section {
-        margin-bottom: 10px;
-    }
+  section {
+    margin-bottom: 10px;
+  }
 }
 
 .region-sidebar-second {
-    section {
-        margin-bottom: 10px;
-    }
+  section {
+    margin-bottom: 10px;
+  }
 }
 
 #block-warningblock {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #views-bootstrap-jobs-block-single-job-employer, #views-bootstrap-employers-block-single-employer {
-    .media {
-        border: none;
-        padding-bottom: 0;
-    }
+  .media {
+    border: none;
+    padding-bottom: 0;
+  }
 }
 
 div.view-display-id-block_jobs_per_employer > div.view-content > div.views-row {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #jix_social_buttons_block, .field--name-field-application-form {
-    margin: 10px 0;
+  margin: 10px 0;
 
-    div {
-        padding: 0 1px;
-    }
+  div {
+    padding: 0 1px;
+  }
 
-    div:first-child {
-        padding-left: 0;
-    }
+  div:first-child {
+    padding-left: 0;
+  }
 
-    div:last-child {
-        padding-right: 0;
-    }
+  div:last-child {
+    padding-right: 0;
+  }
 }
 
 #edit-preview {
-    display: none;
+  display: none;
 }
 
 div.apply-btn-block {
-    float: right;
-    a {
-        width: 100px;
-    }
+  float: right;
+
+  a {
+    width: 100px;
+  }
 }
 
 article.job {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
