@@ -43,7 +43,7 @@
 
             // select#edit-field-job-categorie
             const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            window.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
+            window.intlTelInput(input, {initialCountry: 'cd', nationalMode: false});
             // $('#edit-field-job-categorie').select2({
             //     theme: "bootstrap"
             // });
