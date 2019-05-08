@@ -109,7 +109,7 @@ function jir_preprocess_page(&$variables) {
 
     if (preg_match('(/pricing-plans)', $page_path)
         or preg_match('(/page/our-services)', $page_path)
-        or preg_match('(/page/poster-un-offre)', $page_path)) {
+        or preg_match('(/page/poster-offre)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
     }
 
