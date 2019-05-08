@@ -7748,8 +7748,11 @@ body a:hover {
 body .super-main {
   padding-top: 90px;
 }
-body nav#block-jir-main-menu ul > li a:hover,
-body nav#block-jir-main-menu ul > li a:focus {
+body nav#block-jir-main-menu ul li.active > a {
+  color: #f6d61f;
+}
+body nav#block-jir-main-menu ul li a:hover,
+body nav#block-jir-main-menu ul li a:focus {
   color: #f6d61f;
 }
 body label.error {

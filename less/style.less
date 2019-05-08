@@ -26,9 +26,15 @@ body {
   }
 
   nav#block-jir-main-menu {
-    ul > li {
-      a:hover, a:focus {
+    ul {
+      li.active > a {
         color: @drc-yellow;
+      }
+
+      li {
+        a:hover, a:focus {
+          color: @drc-yellow;
+        }
       }
     }
   }
