@@ -7739,6 +7739,12 @@ a.list-group-item-danger.active:focus {
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
+body a {
+  color: #E74C3C;
+}
+body a :hover {
+  color: #d62c1a;
+}
 body .super-main {
   padding-top: 90px;
 }
