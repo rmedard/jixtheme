@@ -7748,6 +7748,9 @@ body a:hover {
 body .super-main {
   padding-top: 90px;
 }
+body nav#block-jir-main-menu ul > li > a:hover {
+  color: #f6d61f;
+}
 body label.error {
   color: #ce0724;
 }
@@ -7977,7 +7980,7 @@ div.site-details {
 }
 div.site-details a:hover {
   text-decoration: none;
-  color: #19826d;
+  color: #f6d61f;
 }
 div.job-teaser-left {
   width: 100px;

@@ -9,7 +9,6 @@
 @import "variable-overrides";
 
 @jir-top-height: 16px;
-@dark-green: #19826d;
 @drc-yellow: #f6d61f;
 
 body {
@@ -24,6 +23,12 @@ body {
 
   .super-main {
     padding-top: 90px;
+  }
+
+  nav#block-jir-main-menu {
+    ul > li > a:hover {
+      color: @drc-yellow;
+    }
   }
 
   label.error {
@@ -329,7 +334,7 @@ div.site-details {
 
   a:hover {
     text-decoration: none;
-    color: @dark-green;
+    color: @drc-yellow;
   }
 }
 
