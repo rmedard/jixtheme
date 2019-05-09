@@ -74,7 +74,7 @@
             });
 
             if (isMobile) {
-                let searchBar = $('div#views-exposed-form-adverts-page-search-ads');
+                let searchBar = $('form#views-exposed-form-adverts-page-search-ads');
                 if (searchBar.length) {
                     let searchBarHtml = searchBar.html();
 
