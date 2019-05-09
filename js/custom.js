@@ -74,6 +74,7 @@
             });
 
             if (isMobile) {
+                console.log('This is mobile...');
                 let searchBar = $('div.region-jir-search-bar');
                 if (searchBar.length) {
                     let searchBarHtml = searchBar.html();
