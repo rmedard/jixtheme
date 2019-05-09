@@ -33,7 +33,7 @@
                 }
             };
 
-            console.log("Is this mobile? ==> " + isMobile);
+            console.log("Is this mobile? ==> " + JSON.stringify(isMobile));
 
 
             if (settings.path.isFront) {
