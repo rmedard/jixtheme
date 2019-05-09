@@ -74,7 +74,7 @@
             });
 
             if (isMobile) {
-                let searchBar = $('form#views-exposed-form-adverts-page-search-ads');
+                let searchBar = $('div.region-jir-search-bar');
                 if (searchBar.length) {
                     let searchBarHtml = searchBar.html();
 
@@ -85,7 +85,7 @@
                         '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
                         '                    </div>\n' +
                         '                </div>');
-                    $('div.region-jir-search-bar').replaceWith(content);
+                    searchBar.html(content);
                     // searchBar.remove();
                     // content.insertBefore($('div.main-container'));
                 }
