@@ -35,7 +35,7 @@
 
             let mobileDetect = new MobileDetect(window.navigator.userAgent);
 
-            console.log("Is this mobile? ==> " + mobileDetect.mobile().any());
+            console.log("Is this mobile? ==> " + mobileDetect.mobile() === 'null');
 
 
             if (settings.path.isFront) {
