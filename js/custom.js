@@ -33,6 +33,8 @@
                 }
             };
 
+            console.log("Is this mobile? ==> " + isMobile);
+
 
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(main).addClass('active');
