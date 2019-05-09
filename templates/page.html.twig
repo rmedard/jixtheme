@@ -107,34 +107,16 @@
 <div class="super-main">
 {% if page.jir_search_bar and show_jir_search %}
 
-    {% if is_mobile %}
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <a href="#collapse-bar-html" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> {{ 'Search'|t }}</a>
-                </div>
-                <div id="collapse-bar-html" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        {{ page.jir_search_bar }}
-                    </div>
+    {% block jir_search_bar %}
+        <div class = "container-fluid jir-search-bar">
+            <div class="container">
+                <div class="row">
+                    <div id="search-bar-left" class="col-lg-10 col-md-10 col-sm-12">{{ page.jir_search_bar }}</div>
+                    <div id="search-bar-right" class="col-lg-2 col-md-2 col-sm-12">{{ page.jir_upload_cv }}</div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            {{ page.jir_upload_cv }}
-        </div>
-    {% else %}
-        {% block jir_search_bar %}
-            <div class = "container-fluid jir-search-bar">
-                <div class="container">
-                    <div class="row">
-                        <div id="search-bar-left" class="col-lg-10 col-md-10 col-sm-12">{{ page.jir_search_bar }}</div>
-                        <div id="search-bar-right" class="col-lg-2 col-md-2 col-sm-12">{{ page.jir_upload_cv }}</div>
-                    </div>
-                </div>
-            </div>
-        {% endblock %}
-    {% endif %}
+    {% endblock %}
 
 {% endif %}
 {# Main #}

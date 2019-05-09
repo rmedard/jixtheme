@@ -13,12 +13,6 @@ use Drupal\Core\Entity\EntityInterface;
 
 function jir_preprocess_menu(&$variables) {
 
-    $variables['is_mobile'] = FALSE;
-    $detect = new Mobile_Detect;
-    if ($detect->isMobile()) {
-        $variables['is_mobile'] = TRUE;
-    }
-
     if (isset($variables['menu_name']) and $variables['menu_name'] == 'jobs-tabs-menu') {
         $featured = Drupal::entityQuery('node')
             ->condition('type', 'job')
@@ -87,12 +81,6 @@ function jir_preprocess_page(&$variables) {
     $variables['show_jir_search'] = FALSE;
     $variables['show_sidebars'] = TRUE;
     $variables['show_footer'] = TRUE;
-
-    $variables['is_mobile'] = FALSE;
-    $detect = new Mobile_Detect;
-    if ($detect->isMobile()) {
-        $variables['is_mobile'] = TRUE;
-    }
 
     /*
      * This regex accepts paths like "/" only, or "/adverts/*" where *
