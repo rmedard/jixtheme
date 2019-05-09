@@ -20,6 +20,7 @@ bootstrap-scripts:
 
 custom-scripts:
   js:
+    js/mobile-detect.mini.js: {}
     js/custom.js: {}
   dependencies:
     - webform/webform.element.select2
