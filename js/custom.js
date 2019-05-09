@@ -33,9 +33,11 @@
                 }
             };
 
-            let mobileDetect = new MobileDetect(window.navigator.userAgent);
+            const mobileDetect = new MobileDetect(window.navigator.userAgent);
 
-            console.log("Is this mobile? ==> " + mobileDetect.mobile() === null);
+            let isMob = mobileDetect.mobile() === null;
+
+            console.log("Is this mobile? ==> " + isMob);
 
 
             if (settings.path.isFront) {
