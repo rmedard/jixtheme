@@ -12,33 +12,8 @@
 
             const main = 'mainBehavior';
 
-            const isMobile = {
-                Android: function () {
-                    return navigator.userAgent.match(/Android/i);
-                },
-                BlackBerry: function () {
-                    return navigator.userAgent.match(/BlackBerry/i);
-                },
-                iOS: function () {
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-                },
-                Opera: function () {
-                    return navigator.userAgent.match(/Opera Mini/i);
-                },
-                Windows: function () {
-                    return navigator.userAgent.match(/IEMobile/i);
-                },
-                any: function () {
-                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-                }
-            };
-
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
-
-            let isMob = mobileDetect.mobile() !== null;
-
-            console.log("Is this mobile? ==> " + isMob);
-
+            let isMobile = mobileDetect.mobile() !== null;
 
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(main).addClass('active');
