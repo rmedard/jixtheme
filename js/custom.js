@@ -52,7 +52,7 @@
             });
 
             if (isMobile) {
-                let searchBar = $('div#search-bar-input-form');
+                let searchBar = $('div#views-exposed-form-adverts-page-search-ads');
                 if (searchBar.length) {
                     let searchBarHtml = searchBar.html();
 
@@ -63,9 +63,9 @@
                         '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
                         '                    </div>\n' +
                         '                </div>');
-                    $('div.jix-search-bar').remove();
+                    $('div.region-jir-search-bar').replaceWith(content);
                     // searchBar.remove();
-                    content.insertBefore($('div.main-container'));
+                    // content.insertBefore($('div.main-container'));
                 }
             }
         }
@@ -92,28 +92,4 @@
         }
     };
 
-    let deviceMql = window.matchMedia("(max-width: 767px)");
-    deviceMql.addListener(handleDeviceChange);
-    handleDeviceChange(deviceMql, $);
-
-    function handleDeviceChange(deviceMql, $) {
-        if (deviceMql.matches) {
-            // let searchBar = $('div#search-bar-input-form');
-            // if (searchBar.length) {
-            //     let searchBarHtml = searchBar.html();
-            //
-            //     let content = $('<div class="panel panel-default">\n' +
-            //         '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
-            //         '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>\n' +
-            //         '                    </div>\n' +
-            //         '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
-            //         '                    </div>\n' +
-            //         '                </div>');
-            //     $('div.jix-search-bar').remove();
-            //     // searchBar.remove();
-            //     content.insertBefore($('div.main-container'));
-            // }
-        }
-    }
-
-}(jQuery, Drupal));
+})(jQuery, Drupal);
