@@ -35,7 +35,7 @@
 
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
 
-            let isMob = mobileDetect.mobile() === null;
+            let isMob = mobileDetect.mobile() !== null;
 
             console.log("Is this mobile? ==> " + isMob);
 
