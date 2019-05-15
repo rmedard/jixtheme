@@ -73,12 +73,11 @@
             }
 
             $.fn.select2.defaults.set( "theme", "bootstrap" );
-
-            const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            window.intlTelInput(input, {initialCountry: 'cd', nationalMode: false});
             $("#edit-field-employer-secteur").select2({
                 theme: "bootstrap"
             });
+            const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
+            window.intlTelInput(input, {initialCountry: 'cd', nationalMode: false});
         }
     };
 
