@@ -23,5 +23,5 @@ custom-scripts:
     js/mobile-detect.mini.js: {}
     js/custom.js: {}
   dependencies:
-    - webform/webform.element.select2
     - webform/webform.element.telephone
+    - intelogie/select2-bootstrap-theme
