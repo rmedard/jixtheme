@@ -72,8 +72,8 @@
                 }
             }
 
-            $.fn.select2.defaults.set( "theme", "bootstrap" );
-            $(context).find('#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
+            // $.fn.select2.defaults.set( "theme", "bootstrap" );
+            $(context).find('select#edit-field-employer-secteur').once(main).select2();
 
             const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
             window.intlTelInput(input, {initialCountry: 'cd', nationalMode: false});
