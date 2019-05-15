@@ -7905,10 +7905,14 @@ div.super-featured-jobs > div.view-content > div.media-object .media:not(:last-c
 .jir-pricing-plan,
 .view-display-id-page_pricing_plans > div.view-header {
   text-align: center;
+  border-color: #f6d61f;
 }
 .jir-pricing-plan .panel-heading,
 .view-display-id-page_pricing_plans > div.view-header .panel-heading {
   font-size: x-large;
+  background-color: #f6d61f;
+  border-color: #f6d61f;
+  color: #0269b4;
 }
 .jir-pricing-plan .jir-pricing-price,
 .view-display-id-page_pricing_plans > div.view-header .jir-pricing-price {
