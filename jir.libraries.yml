@@ -21,7 +21,7 @@ bootstrap-scripts:
 select2-bootstrap:
   css:
     theme:
-      vendor://intelogie/select2-bootstrap-theme/select2-bootstrap.css: {}
+     css/select2-bootstrap.css: { minified: true }
 
 custom-scripts:
   js:
