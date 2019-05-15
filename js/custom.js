@@ -51,14 +51,6 @@
                 let uploadCv = $('div.region-jir-upload-cv > section').html();
 
                 if (searchBarForm.length) {
-                    let content = $('<div class="panel panel-default">\n' +
-                        '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
-                        '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>\n' +
-                        '                    </div>\n' +
-                        '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
-                        '                    </div>\n' +
-                        '                </div>');
-
                     const mobileSearchBar = $('<div class="container">\n' +
                         '\t<div class="row">\n' +
                         '\t\t<div class="col-xs-12">\n' +
