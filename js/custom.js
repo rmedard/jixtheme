@@ -51,8 +51,8 @@
                 let uploadCv = $('div.region-jir-upload-cv > section').html();
 
                 if (searchBarForm.length) {
-                    const mobileSearchBar = $('<div class="container">\n' +
-                        '\t<div class="row">\n' +
+                    const mobileSearchBar =
+                        $('\t<div class="row">\n' +
                         '\t\t<div class="col-xs-12">\n' +
                         '\t\t\t<div class="panel panel-default">\n' +
                         '\t\t\t\t<div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
@@ -64,8 +64,7 @@
                         '\t\t<div class="col-xs-12">\n' +
                         '\t\t\t\n' + uploadCv +
                         '\t\t</div>\n' +
-                        '\t</div>\n' +
-                        '</div>');
+                        '\t</div>');
 
                     searchBar.html(mobileSearchBar);
                     // searchBar.remove();
