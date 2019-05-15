@@ -44,18 +44,7 @@
                 superFeaturedBox.hide();
             }
 
-            $.fn.select2.defaults.set( "theme", "bootstrap" );
-
-            // select#edit-field-job-categorie
-            const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            window.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
-            // $('#edit-field-job-categorie').select2({
-            //     theme: "bootstrap"
-            // });
-            $("#edit-field-employer-secteur").select2({
-                theme: "bootstrap"
-            });
-
+            // Fold searchBar in panel
             if (isMobile) {
                 console.log('This is mobile...');
                 let searchBar = $('div.region-jir-search-bar');
@@ -74,6 +63,14 @@
                     // content.insertBefore($('div.main-container'));
                 }
             }
+
+            $.fn.select2.defaults.set( "theme", "bootstrap" );
+
+            const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
+            window.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
+            $("#edit-field-employer-secteur").select2({
+                theme: "bootstrap"
+            });
         }
     };
 
