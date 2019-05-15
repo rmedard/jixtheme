@@ -7765,10 +7765,6 @@ body,
 .form-control {
   color: #222222;
 }
-div.super-main .jir-search-bar {
-  padding: 9px;
-  background: #ecf0f1;
-}
 .jir-top-banner {
   display: none;
 }
@@ -7855,6 +7851,10 @@ aside {
   margin-top: 16px;
 }
 @media (min-width: 992px) {
+  div.super-main .jir-search-bar {
+    padding: 9px;
+    background: #ecf0f1;
+  }
   ul.nav-pills > li > a {
     border-radius: 4px 4px 0 0;
   }

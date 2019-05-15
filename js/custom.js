@@ -12,6 +12,11 @@
 
             const main = 'mainBehavior';
 
+            const mobileDetect = new MobileDetect(window.navigator.userAgent);
+            const isMobile = mobileDetect.mobile() !== null;
+
+            console.log("Is mobile? : " + isMobile);
+
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(main).addClass('active');
             }
@@ -39,63 +44,42 @@
                 superFeaturedBox.hide();
             }
 
+            // Fold searchBar in panel
+            if (isMobile) {
+                let searchBar = $('div.jir-search-bar');
+                let searchBarForm = $('div.region-jir-search-bar > section').html();
+                let uploadCv = $('div.region-jir-upload-cv > section').html();
+
+                if (searchBarForm.length) {
+                    const mobileSearchBar =
+                        $('\t<div class="row">\n' +
+                        '\t\t<div class="col-xs-12">\n' +
+                        '\t\t\t<div class="panel panel-default">\n' +
+                        '\t\t\t\t<div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
+                        '\t\t\t\t\t<a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>\n' +
+                        '\t\t\t\t</div>\n' +
+                        '\t\t\t\t<div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0"> ' + searchBarForm +' </div>\n' +
+                        '\t\t\t</div>\n' +
+                        '\t\t</div>\n' +
+                        '\t\t<div class="col-xs-12" style="margin-top: 10px">\n' +
+                        '\t\t\t\n' + uploadCv +
+                        '\t\t</div>\n' +
+                        '\t</div>');
+
+                    searchBar.html(mobileSearchBar);
+
+                    $('nav#block-jobstabsmenu ul.nav').removeClass('nav-justified');
+                }
+            }
+
             $.fn.select2.defaults.set( "theme", "bootstrap" );
 
-            // select#edit-field-job-categorie
             const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
             window.intlTelInput(input, {initialCountry: 'cd', nationalMode: false});
-            // $('#edit-field-job-categorie').select2({
-            //     theme: "bootstrap"
-            // });
             $("#edit-field-employer-secteur").select2({
                 theme: "bootstrap"
             });
         }
     };
 
-    const isMobile = {
-        Android: function () {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function () {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function () {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function () {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function () {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function () {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-    };
-
-    let deviceMql = window.matchMedia("(max-width: 767px)");
-    deviceMql.addListener(handleDeviceChange);
-    handleDeviceChange(deviceMql, $);
-
-    function handleDeviceChange(deviceMql, $) {
-        if (deviceMql.matches) {
-            let searchBar = $('div#search-bar-input-form');
-            if (searchBar.length) {
-                let searchBarHtml = searchBar.html();
-
-                let content = $('<div class="panel panel-default">\n' +
-                    '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
-                    '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>\n' +
-                    '                    </div>\n' +
-                    '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
-                    '                    </div>\n' +
-                    '                </div>');
-                $('div.jix-search-bar').remove();
-                // searchBar.remove();
-                content.insertBefore($('div.main-container'));
-            }
-        }
-    }
-
-}(jQuery, Drupal));
+})(jQuery, Drupal);

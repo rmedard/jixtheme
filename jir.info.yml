@@ -36,4 +36,3 @@ libraries:
 
 dependencies:
   - twig_tweak:twig_tweak
-  - mobiledetect:mobiledetectlib
