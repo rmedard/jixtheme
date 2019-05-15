@@ -46,11 +46,11 @@
 
             // Fold searchBar in panel
             if (isMobile) {
-                console.log('This is mobile...');
-                let searchBar = $('div.region-jir-search-bar');
-                if (searchBar.length) {
-                    let searchBarHtml = searchBar.html();
+                let searchBar = $('div.jir-search-bar');
+                let searchBarForm = $('div.region-jir-search-bar > section').html();
+                let uploadCv = $('div.region-jir-upload-cv > section').html();
 
+                if (searchBarForm.length) {
                     let content = $('<div class="panel panel-default">\n' +
                         '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
                         '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>\n' +
@@ -58,7 +58,24 @@
                         '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
                         '                    </div>\n' +
                         '                </div>');
-                    searchBar.html(content);
+
+                    const mobileSearchBar = $('<div class="container">\n' +
+                        '\t<div class="row">\n' +
+                        '\t\t<div class="col-xs-12">\n' +
+                        '\t\t\t<div class="panel panel-default">\n' +
+                        '\t\t\t\t<div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
+                        '\t\t\t\t\t<a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><i class="fas fa-search"></i> Search</a>\n' +
+                        '\t\t\t\t</div>\n' +
+                        '\t\t\t\t<div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0"> ' + searchBarForm +' </div>\n' +
+                        '\t\t\t</div>\n' +
+                        '\t\t</div>\n' +
+                        '\t\t<div class="col-xs-12">\n' +
+                        '\t\t\t\n' + uploadCv +
+                        '\t\t</div>\n' +
+                        '\t</div>\n' +
+                        '</div>');
+
+                    searchBar.html(mobileSearchBar);
                     // searchBar.remove();
                     // content.insertBefore($('div.main-container'));
                 }
