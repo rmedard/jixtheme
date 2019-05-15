@@ -21,12 +21,12 @@ bootstrap-scripts:
 select2-bootstrap:
   css:
     theme:
-     css/select2-bootstrap.css: { minified: true }
+     css/select2-bootstrap.min.css: { minified: true }
 
 custom-scripts:
   js:
     js/mobile-detect.mini.js: {}
     js/custom.js: {}
   dependencies:
-    - webform/webform.element.telephone
     - webform/webform.element.select2
+    - webform/webform.element.telephone
