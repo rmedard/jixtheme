@@ -61,14 +61,14 @@
                         '\t\t\t\t<div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0"> ' + searchBarForm +' </div>\n' +
                         '\t\t\t</div>\n' +
                         '\t\t</div>\n' +
-                        '\t\t<div class="col-xs-12">\n' +
+                        '\t\t<div class="col-xs-12" style="margin-top: 10px">\n' +
                         '\t\t\t\n' + uploadCv +
                         '\t\t</div>\n' +
                         '\t</div>');
 
                     searchBar.html(mobileSearchBar);
-                    // searchBar.remove();
-                    // content.insertBefore($('div.main-container'));
+
+                    $('nav#block-jobstabsmenu ul.nav').removeClass('nav-justified');
                 }
             }
 
