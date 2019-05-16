@@ -75,8 +75,6 @@
                 }
             }
 
-            // $.fn.select2.defaults.set( "theme", "bootstrap" );
-            // $( "#edit-field-employer-secteur" ).select2({theme: "bootstrap"});
             $(context).find('select#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
             $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
