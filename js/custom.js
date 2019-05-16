@@ -15,8 +15,6 @@
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
             const isMobile = mobileDetect.mobile() !== null;
 
-            console.log("Is mobile? : " + isMobile);
-
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(main).addClass('active');
             }
