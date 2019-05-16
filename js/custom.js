@@ -76,7 +76,7 @@
             // $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
             const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            window.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
+            Drupal.webform.intlTelInput(input, {initialCountry: 'bi', nationalMode: false});
         }
     };
 
