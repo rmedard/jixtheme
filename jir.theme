@@ -146,7 +146,11 @@ function jir_preprocess_field(&$variables) {
 
 function jir_preprocess_page_title(&$variables){
     $queryString = Drupal::request()->getPathInfo();
-    if (isset($queryString) && preg_match('(node/add/employer)', $queryString)) {
-        $variables['title'] = t('Créer un employeur');
+    if (isset($queryString)) {
+        if (preg_match('(node/add/employer)', $queryString)) {
+            $variables['title'] = t('Créer un employeur');
+        } elseif (preg_match('(node/add/job)', $queryString)) {
+            $variables['title'] = t('Créer un job');
+        }
     }
 }
