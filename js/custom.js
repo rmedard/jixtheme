@@ -9,7 +9,7 @@
 
     Drupal.webform = Drupal.webform || {};
     Drupal.webform.intlTelInput = Drupal.webform.intlTelInput || {};
-    Drupal.webform.intlTelInput.options = Drupal.webform.intlTelInput.options || {};
+    Drupal.webform.select2 = Drupal.webform.select2 || {};
 
     Drupal.behaviors.mainBehavior = {
 
@@ -75,10 +75,8 @@
                 }
             }
 
-            // $.fn.select2.defaults.set('theme', 'bootstrap');
-            $(context).find('select').once(main).select2({theme: 'bootstrap'});
-            // $(context).find('select#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
-            // $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
+            $(context).find('select#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
+            $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
             $(context).find('input.form-tel').once(main).each(function () {
                 $(this).intlTelInput({initialCountry: 'bi', nationalMode: false});
