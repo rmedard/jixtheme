@@ -6,6 +6,11 @@
 (function ($, Drupal) {
 
     'use strict';
+
+    Drupal.webform = Drupal.webform || {};
+    Drupal.webform.intlTelInput = Drupal.webform.intlTelInput || {};
+    Drupal.webform.intlTelInput.options = Drupal.webform.intlTelInput.options || {};
+
     Drupal.behaviors.mainBehavior = {
 
         attach: function (context, settings) {
@@ -75,8 +80,9 @@
             // $(context).find('select#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
             // $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
-            const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            input.intlTelInput({initialCountry: 'bi', nationalMode: false});
+            // const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
+            // input.intlTelInput({initialCountry: 'bi', nationalMode: false});
+            $(context).find('input#edit-field-job-contact-phone-number-0-value').once(main).intlTelInput({initialCountry: 'bi', nationalMode: false});
         }
     };
 
