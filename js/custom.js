@@ -80,9 +80,9 @@
             // $(context).find('select#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
             // $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
-            // const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            // input.intlTelInput({initialCountry: 'bi', nationalMode: false});
-            $(context).find('input#edit-field-job-contact-phone-number-0-value').once(main).intlTelInput({initialCountry: 'bi', nationalMode: false});
+            $(context).find('input.form-tel').once(main).each(function () {
+                $(this).intlTelInput({initialCountry: 'bi', nationalMode: false});
+            });
         }
     };
 
