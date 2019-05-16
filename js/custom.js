@@ -6,6 +6,11 @@
 (function ($, Drupal) {
 
     'use strict';
+
+    Drupal.webform = Drupal.webform || {};
+    Drupal.webform.intlTelInput = Drupal.webform.intlTelInput || {};
+    Drupal.webform.intlTelInput.options = Drupal.webform.intlTelInput.options || {};
+
     Drupal.behaviors.mainBehavior = {
 
         attach: function (context, settings) {
@@ -14,8 +19,6 @@
 
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
             const isMobile = mobileDetect.mobile() !== null;
-
-            console.log("Is mobile? : " + isMobile);
 
             if (settings.path.isFront) {
                 $(context).find('nav#block-jir-main-menu > ul.menu > li:first-child').once(main).addClass('active');
@@ -77,8 +80,9 @@
             $(context).find('select#edit-field-employer-secteur').once(main).select2({theme: 'bootstrap'});
             $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
-            const input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
-            window.intlTelInput(input, {initialCountry: 'cd', nationalMode: false});
+            $(context).find('input.form-tel').once(main).each(function () {
+                $(this).intlTelInput({initialCountry: 'cd', nationalMode: false});
+            });
         }
     };
 
