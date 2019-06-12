@@ -11,7 +11,8 @@ use Drupal\Core\Entity\EntityInterface;
  * Place your custom PHP code in this file.
  */
 
-function jir_preprocess_menu(&$variables) {
+function jir_preprocess_menu(&$variables)
+{
 
     if (isset($variables['menu_name']) and $variables['menu_name'] == 'jobs-tabs-menu') {
         $featured = Drupal::entityQuery('node')
@@ -73,7 +74,8 @@ function jir_preprocess_menu(&$variables) {
     }
 }
 
-function jir_preprocess_page(&$variables) {
+function jir_preprocess_page(&$variables)
+{
     $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['contexts'][] = 'url.query_args'; // If you have query args available and want to update cache when they change.
 
@@ -107,7 +109,8 @@ function jir_preprocess_page(&$variables) {
     }
 }
 
-function jir_preprocess_field(&$variables) {
+function jir_preprocess_field(&$variables)
+{
     $banner_block = $variables['element']['#object'];
     if ($banner_block instanceof EntityInterface
         and $banner_block->getEntityType()->id() == 'block_content'
@@ -144,7 +147,8 @@ function jir_preprocess_field(&$variables) {
     }
 }
 
-function jir_preprocess_page_title(&$variables){
+function jir_preprocess_page_title(&$variables)
+{
     $queryString = Drupal::request()->getPathInfo();
     if (isset($queryString)) {
         if (preg_match('(node/add/employer)', $queryString)) {
