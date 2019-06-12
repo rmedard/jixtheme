@@ -154,3 +154,9 @@ function jir_preprocess_page_title(&$variables){
         }
     }
 }
+
+function jir_preprocess_blick(&$variables) {
+    if($variables['derivative_plugin_id'] == 'services-block') {
+        $variables['#cache']['max-age'] = 0;
+    }
+}
