@@ -7738,6 +7738,9 @@ div.jir-search-textfield > div.input-group {
   width: 100%;
 }
 @media (max-width: 768px) {
+  .media-heading {
+    font-size: large;
+  }
   header#navbar {
     background-color: #ecf0f1;
     border-bottom: 1px #0269b4 solid;
