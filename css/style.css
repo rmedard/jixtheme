@@ -7703,6 +7703,11 @@ body label.error {
 body input.error {
   border-color: #E74C3C;
 }
+body div.region-sidebar-first section.block,
+body div.region-sidebar-second section.block,
+body div.region-sidebar-horizontal section.block {
+  margin-bottom: 10px;
+}
 body,
 .form-control {
   color: #222222;
