@@ -7708,6 +7708,16 @@ body div.region-sidebar-second section.block,
 body div.region-sidebar-horizontal section.block {
   margin-bottom: 10px;
 }
+body div.region-sidebar-first section.block .block-title,
+body div.region-sidebar-second section.block .block-title,
+body div.region-sidebar-horizontal section.block .block-title {
+  margin-top: 5px;
+}
+body div.region-sidebar-first section.well form div.form-actions,
+body div.region-sidebar-second section.well form div.form-actions,
+body div.region-sidebar-horizontal section.well form div.form-actions {
+  margin-bottom: 0;
+}
 body,
 .form-control {
   color: #222222;
