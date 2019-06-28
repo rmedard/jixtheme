@@ -12,9 +12,20 @@
 @brand-success:         #1fb53b;
 @brand-info:            #cb0923;
 
+@drc-yellow: #f6d61f;
+
 //** Global textual link color.
 @link-color:            @brand-info;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 10%);
 //** Link hover decoration.
 @link-hover-decoration: none;
+
+@navbar-default-link-hover-color: @drc-yellow;
+@navbar-default-link-active-color: @navbar-default-link-hover-color;
+
+.alert-warning {
+  background-color: lighten(@brand-warning, 30%);
+  border-color: lighten(@brand-warning, 30%);
+  color: darken(@brand-warning, 20%);
+}
