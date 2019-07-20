@@ -25,6 +25,7 @@ select2-bootstrap:
 
 custom-scripts:
   js:
+    https://static.addtoany.com/menu/page.js: { type: external, minified: true }
     js/mobile-detect.mini.js: {}
     js/custom.js: {}
   dependencies:
