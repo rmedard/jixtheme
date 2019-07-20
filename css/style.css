@@ -7967,13 +7967,10 @@ div.alert {
   margin-top: 5px;
 }
 div.employer-thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-}
-div.employer-thumbnail div.caption {
-  width: 100%;
-}
-div.employer-thumbnail div.employer-thumb-logo {
-  line-height: 100px;
 }
 div.media-object .media {
   display: flex;
