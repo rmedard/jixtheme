@@ -3,7 +3,7 @@ type: theme
 base theme: bootstrap
 screenshot: jic_theme.png
 
-name: 'JIC Custom Theme'
+name: 'Job In Cameroon Theme'
 description: 'Custom theme for JIC based on Bootstrap framework LESS source.'
 package: 'Custom'
 
