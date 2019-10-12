@@ -1,9 +1,10 @@
 core: 8.x
 type: theme
 base theme: bootstrap
+screenshot: jer_theme.png
 
-name: 'JIX Custom Theme'
-description: 'Custom theme for JIX based on Bootstrap framework LESS source.'
+name: 'Job en RDC Theme'
+description: 'Custom theme for JER based on Bootstrap framework LESS source.'
 package: 'Custom'
 
 regions:
