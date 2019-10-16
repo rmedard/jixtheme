@@ -79,7 +79,7 @@
             $(context).find('select#edit-field-job-categorie').once(main).select2({theme: 'bootstrap'});
 
             $(context).find('input.form-tel').once(main).each(function () {
-                $(this).intlTelInput({initialCountry: 'bi', nationalMode: false});
+                $(this).intlTelInput({initialCountry: 'cm', nationalMode: false});
             });
         }
     };
